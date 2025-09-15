@@ -1,40 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import { useState, useEffect } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import History from './History.jsx';
-import Portfolio from './Portfolio.jsx';
-import About from './About.jsx';
+import History from './pages/History.jsx';
+import Portfolio from './pages/Portfolio.jsx';
+import About from './pages/About.jsx';
+import Skills from './pages/Skills.jsx';
+import Experience from './pages/Experience.jsx';
+import Contact from './pages/Contact.jsx';
+import Dday from './Dday.jsx';
 
 function App() {
-  const graduationDate = new Date('2025-12-31');
-  const [remainingDays, setRemainingDays] = useState(0);
-
-  useEffect(() => {
-      const today = new Date();
-      const differenceInTime = graduationDate.getTime() - today.getTime();
-      const differenceInDays = Math.ceil(differenceInTime / (1000 * 3600 * 24));
-      setRemainingDays(differenceInDays);
-  }, []);
-
   return (
     <>
-      <h1>👨‍💻 000의 포트폴리오 사이트</h1>
-      <div>
-          <h2>🎓 졸업까지 D-{remainingDays}</h2>
-      </div>
+      <h1>👨‍💻 배준일의 포트폴리오 사이트</h1>
+      <header>
+        <Dday />
+      </header>
       <nav>
+        <Link to="/about">🙋‍♂️ 나에 대해</Link> | {" "}
+        <Link to="/skills">🛠️ 기술 스택</Link> | {" "}
+        <Link to="/experience">📜 경험</Link> | {" "}
+        <Link to="/contact">📞 연락하기</Link> | {" "}
         <Link to="/history">📜 이력</Link> | {" "}
-        <Link to="/portfolio">🖼️ 포트폴리오</Link> | {" "}
-        <Link to="/about">🙋‍♂️ 자기소개</Link>
+        <Link to="/portfolio">🖼️ 포트폴리오</Link>
       </nav>
       <div className="main-content">
         <Routes>
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/history" element={<History />} />
           <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </>
