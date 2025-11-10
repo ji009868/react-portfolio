@@ -1,19 +1,21 @@
 /* =========================
-   Design Tokens (과제 색상)
+   Design Tokens (컬러 시스템 리뉴얼)
 ========================= */
 :root {
-  --primary: #56AFDF;    /* 주제색 */
-  --accent:  #FFD25F;    /* 강조색 */
-  --bg:      #F5F7FB;    /* 배경색 */
-  --sub:     #0F172A;    /* 보조색 (진한 텍스트/라인) */
+  /* 🎨 컬러 시스템 (역할 기반) */
+  --primary: #2C7FB8;   /* 주제색 — 아이덴티티, 로고, 헤더/푸터 배경 */
+  --accent:  #FFD25F;   /* 강조색 — 버튼, 링크, 포인트 */
+  --bg:      #F5F7FB;   /* 배경색 — 페이지 바탕 */
+  --sub:     #0F172A;   /* 보조색 — 본문 텍스트, 라인 */
 
-  --text:    #0F172A;
-  --muted:   #6B7280;
-  --card:    #ffffff;
+  /* 💬 텍스트/카드/그림자 */
+  --text: var(--sub);
+  --muted: #6B7280;
+  --card: #FFFFFF;
+  --shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
 
-  --shadow:  0 8px 30px rgba(15, 23, 42, 0.08);
-  --radius:  14px;
-
+  /* 📐 레이아웃 */
+  --radius: 14px;
   --container: 1200px;
   --h1: clamp(28px, 5vw, 44px);
   --h2: clamp(22px, 3.5vw, 28px);
@@ -35,7 +37,7 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Noto Sans KR', Helvetica, Arial, sans-serif;
   color: var(--text);
-  background: var(--bg);
+  background: var(--bg);   /* ✅ 다른 페이지 기본 배경 */
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -55,11 +57,14 @@ button { font: inherit; }
   padding: 0 20px;
 }
 
+/* =========================
+   Header
+========================= */
 header.site-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(245, 247, 251, 0.85);
+  background: var(--card);
   backdrop-filter: saturate(140%) blur(10px);
   border-bottom: 1px solid rgba(15, 23, 42, 0.06);
 }
@@ -77,12 +82,12 @@ header.site-header {
   gap: 10px;
   font-weight: 800;
   letter-spacing: .2px;
-  color: var(--sub);
+  color: var(--primary);
 }
 .brand-dot {
   width: 12px; height: 12px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), #7ec8ec);
-  box-shadow: 0 0 0 3px rgba(86, 175, 223, 0.18);
+  background: var(--primary);
+  box-shadow: 0 0 0 3px rgba(44, 127, 184, 0.25);
 }
 
 nav a {
@@ -95,27 +100,36 @@ nav a {
   transition: 150ms ease;
 }
 nav a:hover {
-  background: rgba(86, 175, 223, 0.12);
+  background: rgba(44, 127, 184, 0.12);
   color: var(--primary);
-  border-color: rgba(86, 175, 223, 0.24);
+  border-color: rgba(44, 127, 184, 0.24);
 }
 
+/* =========================
+   Main & Section Layout
+========================= */
 .main-content {
-  height: calc(100vh - 64px - 80px);
+  min-height: calc(100vh - 64px - 80px);
   overflow-y: auto;
   padding: 24px 0 32px;
 }
 
 /* =========================
-   Cards / Utilities
+   Cards & Common Components
 ========================= */
 .card {
   background: var(--card);
   border: 1px solid rgba(15, 23, 42, 0.06);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.12);
 }
 
+/* 뱃지 (저채도, 포인트 최소화) */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -123,18 +137,80 @@ nav a:hover {
   padding: 6px 10px;
   border-radius: 999px;
   font-size: 12px;
-  background: rgba(255, 210, 95, .16);
-  color: #815f00;
-  border: 1px solid rgba(255, 210, 95, .36);
+  background: color-mix(in srgb, var(--accent) 20%, white);
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  color: var(--sub);
+  font-weight: 500;
 }
 
+/* 태그 (보조용) */
 .tag {
   font-size: 12px;
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(86, 175, 223, .12);
+  background: rgba(44, 127, 184, 0.12);
   color: var(--primary);
-  border: 1px solid rgba(86, 175, 223, .22);
+  border: 1px solid rgba(44, 127, 184, 0.22);
+}
+
+/* =========================
+   Portfolio Grid
+========================= */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: clamp(28px, 3vw, 48px); /* ✅ 간격 넓힘 */
+  padding-inline: clamp(16px, 3vw, 32px);
+}
+
+/* =========================
+   Headings
+========================= */
+h1 { font-size: var(--h1); line-height: 1.15; margin: 0 0 12px; color: var(--sub); }
+h2 { font-size: var(--h2); line-height: 1.2; margin: 0 0 12px; color: var(--sub); }
+h3 { font-size: var(--h3); line-height: 1.25; margin: 0 0 8px; color: var(--sub); }
+
+/* =========================
+   Buttons & Links
+========================= */
+button,
+.btn {
+  background: var(--accent);
+  color: var(--sub);
+  border: none;
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 12px 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+  transition: all 0.25s ease;
+}
+button:hover,
+.btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+}
+
+/* =========================
+   Footer
+========================= */
+.site-footer {
+  padding: 20px 0 24px;
+  color: var(--muted);
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  background: #fff;
+}
+.site-footer strong {
+  color: var(--primary);
+}
+
+/* =========================
+   Utilities
+========================= */
+hr.sep {
+  border: 0;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  margin: 18px 0;
 }
 
 .grid-2 {
@@ -151,24 +227,3 @@ nav a:hover {
 }
 @media (max-width: 1024px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .grid-3 { grid-template-columns: 1fr; } }
-
-hr.sep {
-  border: 0;
-  border-top: 1px solid rgba(15, 23, 42, 0.08);
-  margin: 18px 0;
-}
-
-/* =========================
-   Headings (consistent)
-========================= */
-h1 { font-size: var(--h1); line-height: 1.15; margin: 0 0 12px; }
-h2 { font-size: var(--h2); line-height: 1.2; margin: 0 0 12px; }
-h3 { font-size: var(--h3); line-height: 1.25; margin: 0 0 8px; }
-
-/* Footer */
-.site-footer {
-  padding: 20px 0 24px;
-  color: var(--muted);
-  border-top: 1px solid rgba(15, 23, 42, 0.08);
-  background: #fff;
-}

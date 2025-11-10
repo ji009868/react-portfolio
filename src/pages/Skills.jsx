@@ -1,101 +1,204 @@
-// Skills.jsx — 기술 및 포트폴리오 정리 섹션
-// 컬러 시스템: #56AFDF / #FFD25F / #F5F7FB / #0F172A
+import "./Skills.css";
 
 export default function Skills() {
   return (
-    <main className="page">
-      <h2>Skills & Projects</h2>
-      <p style={{ color: "var(--muted)" }}>
-        교안 ‘툴 사용 능력 표기’를 참고하여 사용기술과 포트폴리오 프로젝트를
-        정리했습니다.
-      </p>
+    <main className="page skills-page">
+      <section className="skills-section container">
+        <header className="skills-header">
+          <h1 className="title">Skills & Tools</h1>
+        </header>
 
-      {/* ========= Main Skills ========= */}
-      <section style={{ marginTop: 24 }}>
-        <h3>🧩 Main Skills</h3>
-        <div className="grid-3" style={{ marginTop: 12 }}>
-          <div className="card" style={{ padding: 16 }}>
-            <h4>HTML</h4>
-            <ul>
-              <li>시맨틱 태그 구조를 이해하고 활용할 수 있습니다.</li>
-              <li>HTML5 요소를 이용한 페이지 레이아웃 구성이 가능합니다.</li>
-              <li>폼, 미디어, 테이블 요소를 활용할 수 있습니다.</li>
-            </ul>
-          </div>
+        {/* =========================
+            MAIN — 업무 범위 중심
+        ========================== */}
+        <section aria-labelledby="main-skills">
+          <h2 id="main-skills" className="section-title">
+            Main Skills
+          </h2>
+          <div className="skill-grid">
+            <div className="card skill-card">
+              <h4>HTML</h4>
+              <ul>
+                <li>시맨틱 태그 구조 설계 및 접근성 고려 마크업 구현</li>
+                <li>header, nav, main, article, aside, footer 요소 배치</li>
+                <li>폼·미디어·테이블 요소 구성 및 레이블·대체 텍스트 적용</li>
+              </ul>
+            </div>
 
-          <div className="card" style={{ padding: 16 }}>
-            <h4>CSS</h4>
-            <ul>
-              <li>Flexbox와 Grid 시스템으로 레이아웃을 설계할 수 있습니다.</li>
-              <li>keyframes를 이용한 애니메이션 효과를 구현할 수 있습니다.</li>
-              <li>media query로 반응형 웹을 구성할 수 있습니다.</li>
-            </ul>
-          </div>
+            <div className="card skill-card">
+              <h4>CSS</h4>
+              <ul>
+                <li>Flexbox·Grid를 활용한 반응형 레이아웃 설계</li>
+                <li><code>@keyframes</code> 기반 인터랙션 및 애니메이션 구현</li>
+                <li>Media Query 적용을 통한 다양한 해상도 대응</li>
+              </ul>
+            </div>
 
-          <div className="card" style={{ padding: 16 }}>
-            <h4>JavaScript</h4>
-            <ul>
-              <li>DOM 조작 및 이벤트 처리를 이해하고 구현할 수 있습니다.</li>
-              <li>fetch / async-await으로 비동기 통신을 구현할 수 있습니다.</li>
-              <li>React, Node.js 등 라이브러리 연동이 가능합니다.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+            <div className="card skill-card">
+              <h4>JavaScript (ES6+)</h4>
+              <ul>
+                <li>DOM 조작 및 이벤트 처리 로직 구현</li>
+                <li><code>fetch</code> + <code>async/await</code> 기반 비동기 통신 구성</li>
+                <li>모듈화·함수형 패턴을 활용한 재사용 가능한 코드 설계</li>
+              </ul>
+            </div>
 
-      {/* ========= Sub Skills ========= */}
-      <section style={{ marginTop: 32 }}>
-        <h3>💻 Sub Skills</h3>
-        <div className="grid-3" style={{ marginTop: 12 }}>
-          <div className="card" style={{ padding: 16 }}>
-            <h4>React / Next.js</h4>
-            <p style={{ color: "var(--muted)" }}>
-              컴포넌트 기반 설계, 라우팅, 상태 관리, 훅 활용, Firebase 연동 경험
-            </p>
-          </div>
+            <div className="card skill-card">
+              <h4>React</h4>
+              <ul>
+                <li>Hooks(⟪useState, useEffect, useMemo⟫)를 활용한 SPA 구현</li>
+                <li>컴포넌트 구조 및 상태 흐름 설계</li>
+                <li>로딩·에러 상태 관리 및 UI 전환 애니메이션 구성</li>
+              </ul>
+            </div>
 
-          <div className="card" style={{ padding: 16 }}>
-            <h4>Firebase / Node.js</h4>
-            <p style={{ color: "var(--muted)" }}>
-              Firestore 데이터 CRUD, Storage 이미지 업로드, Hosting 및 Functions
-              구현 경험
-            </p>
-          </div>
+            <div className="card skill-card">
+              <h4>React Router / 상태관리</h4>
+              <ul>
+                <li>중첩 라우팅 및 동적 파라미터 기반 화면 전환 구성</li>
+                <li>Zustand / React Query를 활용한 상태 관리 적용</li>
+                <li>Lazy Loading 및 코드 스플리팅을 통한 초기 로딩 최적화</li>
+              </ul>
+            </div>
 
-          <div className="card" style={{ padding: 16 }}>
-            <h4>Git / Github</h4>
-            <p style={{ color: "var(--muted)" }}>
-              Git 버전 관리와 협업 브랜치 전략, GitHub Pages 및 Actions 배포 경험
-            </p>
-          </div>
-        </div>
-      </section>
+            <div className="card skill-card">
+              <h4>접근성 (A11y)</h4>
+              <ul>
+                <li>시맨틱 구조, 포커스 순서, 키보드 탐색 최적화</li>
+                <li>명도 대비(AA) 및 ARIA 속성 적용</li>
+                <li>스크린리더 환경 대응을 위한 대화형 요소 설계</li>
+              </ul>
+            </div>
 
-      {/* ========= Tools ========= */}
-      <section style={{ marginTop: 32 }}>
-        <h3>🛠️ Design & Tool</h3>
-        <div className="grid-3" style={{ marginTop: 12 }}>
-          <div className="card" style={{ padding: 16 }}>
-            <h4>Figma</h4>
-            <p style={{ color: "var(--muted)" }}>
-              UI/UX 설계, 와이어프레임, 프로토타입 제작 및 팀 협업 경험
-            </p>
-          </div>
+            <div className="card skill-card">
+              <h4>퍼포먼스</h4>
+              <ul>
+                <li>Lighthouse·Web Vitals 기반 렌더링 성능 개선</li>
+                <li>이미지 포맷·사이즈 최적화 및 지연 로딩 적용</li>
+                <li>useMemo·useCallback 활용을 통한 리렌더 최소화</li>
+              </ul>
+            </div>
 
-          <div className="card" style={{ padding: 16 }}>
-            <h4>Illustrator / Photoshop</h4>
-            <p style={{ color: "var(--muted)" }}>
-              아이콘, 그래픽 에셋 제작 및 편집, 시각 디자인 요소 제작
-            </p>
-          </div>
+            <div className="card skill-card">
+              <h4>API / 네트워킹</h4>
+              <ul>
+                <li>RESTful API 통신 및 오류 처리 로직 구성</li>
+                <li>환경 변수(.env) 기반 API 키 관리 및 보안 설정</li>
+                <li>검색·정렬·페이지네이션 비동기 데이터 처리 구현</li>
+              </ul>
+            </div>
 
-          <div className="card" style={{ padding: 16 }}>
-            <h4>After Effects / Premiere Pro</h4>
-            <p style={{ color: "var(--muted)" }}>
-              모션그래픽 제작, 영상 편집, 자막·색보정 등 후반작업 수행
-            </p>
+            <div className="card skill-card">
+              <h4>툴링 · 빌드</h4>
+              <ul>
+                <li>Vite 환경 구성 및 플러그인 설정</li>
+                <li>ESLint·Prettier 적용을 통한 코드 스타일 일관화</li>
+                <li>소스맵·번들 분석을 통한 성능 병목 개선</li>
+              </ul>
+            </div>
+
+            <div className="card skill-card">
+              <h4>Git / GitHub</h4>
+              <ul>
+                <li>GitHub Flow 기반 브랜치 전략 및 협업 워크플로우 운영</li>
+                <li>릴리즈 태깅·체인지로그 관리</li>
+                <li>Issue·Projects를 활용한 작업 단위 관리</li>
+              </ul>
+            </div>
+
+            <div className="card skill-card">
+              <h4>Firebase</h4>
+              <ul>
+                <li>Auth·Firestore·Storage·Hosting 통합 연동</li>
+                <li>보안 규칙·인덱싱 설정을 통한 데이터 접근 제어</li>
+                <li>Firebase Functions 기반 백엔드 로직 구현</li>
+              </ul>
+            </div>
+
+            <div className="card skill-card">
+              <h4>테스트</h4>
+              <ul>
+                <li>Vitest + React Testing Library 기반 단위 테스트 구성</li>
+                <li>핵심 훅·유틸리티 테스트 코드 작성</li>
+                <li>CI 환경 테스트 통합을 통한 품질 검증</li>
+              </ul>
+            </div>
           </div>
-        </div>
+        </section>
+
+        {/* =========================
+            SUB — 우대사항 중심
+        ========================== */}
+        <section aria-labelledby="sub-skills">
+          <h2 id="sub-skills" className="section-title">
+            Sub Skills
+          </h2>
+          <div className="skill-grid">
+            <div className="card skill-card">
+              <h4>Next.js</h4>
+              <ul>
+                <li>SSR / SSG 적용을 통한 초기 로딩 및 SEO 개선</li>
+                <li>App Router 기반 데이터 패칭 구조 설계</li>
+                <li>Next/Image 최적화 및 정적 자원 관리</li>
+              </ul>
+            </div>
+
+            <div className="card skill-card">
+              <h4>스타일링 시스템</h4>
+              <ul>
+                <li>Tailwind / Styled-Components를 활용한 디자인 시스템 구축</li>
+                <li>컴포넌트 단위 UI 재사용 구조 설계</li>
+                <li>다크모드 및 테마 토글 상태 관리 적용</li>
+              </ul>
+            </div>
+
+            <div className="card skill-card">
+              <h4>Figma 협업</h4>
+              <ul>
+                <li>디자이너와의 컴포넌트 단위 공동 작업 프로세스 구축</li>
+                <li>간격·색상·타이포 기준 핸드오프 가이드 반영</li>
+                <li>프로토타입 기반 인터랙션 정의 및 구현</li>
+              </ul>
+            </div>
+
+            <div className="card skill-card">
+              <h4>간단한 백엔드</h4>
+              <ul>
+                <li>Express·Firebase Functions 기반 REST API 구성</li>
+                <li>라우팅·미들웨어 구조 설계 및 요청 검증 로직 적용</li>
+                <li>로그·모니터링 환경 구축을 통한 안정성 확보</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* =========================
+            ETC — 확장 역량
+        ========================== */}
+        <section aria-labelledby="etc-skills">
+          <h2 id="etc-skills" className="section-title">
+            Etc.
+          </h2>
+          <div className="skill-grid">
+            <div className="card skill-card">
+              <h4>디자인 툴</h4>
+              <ul>
+                <li>Photoshop·Illustrator·After Effects를 활용한 그래픽·모션 제작</li>
+                <li>3ds Max 모델링·렌더링 기초 작업 경험</li>
+                <li>브랜딩 가이드 → UI 토큰 변환 및 적용</li>
+              </ul>
+            </div>
+
+            <div className="card skill-card">
+              <h4>제2외국어</h4>
+              <ul>
+                <li>일본어 JLPT N3 수준 독해 및 기본 커뮤니케이션 활용</li>
+                <li>기술 문서 해석 및 프로젝트 적용</li>
+                <li>해외 레퍼런스 기반 기능 분석 및 구현</li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </section>
     </main>
   );

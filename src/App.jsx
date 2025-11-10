@@ -6,6 +6,7 @@ import About from './pages/About.jsx';
 import Skills from './pages/Skills.jsx';
 import Experience from './pages/Experience.jsx';
 import Contact from './pages/Contact.jsx';
+import PortfolioDetail from "./pages/PortfolioDetail.jsx";
 
 
 function App() {
@@ -38,13 +39,14 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/history" element={<History />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/portfolio/:id" element={<PortfolioDetail />} />
         </Routes>
       </div>
 
       {/* 푸터 */}
       <footer className="site-footer">
         <div className="container">
-          © {new Date().getFullYear()} Bae Junil — Colors:
+          © {new Date().getFullYear()} Bae Junil
         </div>
       </footer>
     </>

@@ -1,0 +1,93 @@
+.page.skills-page {
+  background: var(--bg);
+  color: var(--text);
+  padding: 60px 0 100px;
+}
+
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Header */
+.skills-header .title {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0 0 8px;
+}
+.skills-header .desc {
+  color: var(--muted);
+  max-width: 780px;
+}
+
+/* Section title */
+.section-title {
+  font-size: clamp(22px, 3.2vw, 26px);
+  font-weight: 800;
+  color: var(--sub);
+  margin: 12px 0 16px;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--accent);
+  margin-top: 6px;
+}
+
+/* Grid */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2vw, 20px);
+}
+@media (max-width: 1100px) {
+  .skill-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 680px) {
+  .skill-grid { grid-template-columns: 1fr; }
+}
+
+/* Card */
+.skill-card {
+  padding: clamp(18px, 2.2vw, 22px);
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: var(--shadow);
+}
+
+/* Headings in card */
+.skill-card h4 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+/* List */
+.skill-card ul {
+  margin: 0;
+  padding-left: 18px; /* 가독성 있는 기본 불릿 */
+}
+.skill-card li {
+  margin: 6px 0;
+  line-height: 1.6;
+  color: var(--text);
+}
+.skill-card code {
+  background: rgba(15, 23, 42, 0.06);
+  padding: 0 6px;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Spacing between sections */
+.skills-section > section + section {
+  margin-top: 14px;
+}
