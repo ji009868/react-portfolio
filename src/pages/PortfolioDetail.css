@@ -1,39 +1,214 @@
-.detail-topbar{ display:flex; align-items:center; gap:8px; }
-.detail-topbar .spacer{ flex:1; }
-.ghost{ background:transparent; border:1px solid rgba(15,23,42,.15); padding:8px 12px; border-radius:10px; cursor:pointer; }
+/* ===============================
+   Top Bar
+================================ */
+.detail-topbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
-.detail-hero{ display:grid; grid-template-columns: 1.2fr 1fr; gap:28px; margin-top:16px; align-items:center; }
-.hero-media{ border-radius:22px; overflow:hidden; }
-.hero-media img{ width:100%; height:100%; object-fit:cover; }
-.hero-info h1{ margin:0 0 6px; font-size:2rem; }
-.hero-info .subtitle{ color:var(--sub,#0f172a); font-weight:600; margin:0 0 10px; }
-.hero-info .lead{ color:#374151; line-height:1.7; margin-bottom:12px; }
-.chips{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:10px; }
-.chip{ background:#e5e7eb; color:#0f172a; padding:6px 10px; border-radius:999px; font-size:.85rem; }
-.chip.main{ background:var(--main_color_main_3,#56afdf); color:#fff; }
+.detail-topbar .spacer {
+  flex: 1;
+}
 
-.roles{ margin-top:8px; }
-.roles ul{ margin:6px 0 0 18px; }
+.ghost {
+  background: transparent;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
-.detail-gallery{ display:grid; grid-template-columns: repeat(3,1fr); gap:16px; margin:28px 0; }
-.detail-gallery figure{ margin:0; border-radius:16px; overflow:hidden; }
-.detail-gallery img{ width:100%; height:100%; object-fit:cover; display:block; }
+/* ===============================
+   Hero
+================================ */
+.detail-hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 28px;
+  margin-top: 16px;
+  align-items: center;
+}
 
-.detail-split{ display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
-.card{ background:#fff; border:1px solid rgba(15,23,42,.08); border-radius:18px; padding:18px; }
-.steps{ counter-reset:s; list-style:none; padding:0; margin:8px 0 0; }
-.steps li{ display:flex; gap:10px; align-items:flex-start; margin:8px 0; }
-.steps .num{ width:28px; height:28px; border-radius:50%; display:inline-grid; place-items:center;
-  background:var(--main_color_main_3,#56afdf); color:#fff; font-weight:700; flex:0 0 28px; }
+.hero-media {
+  border-radius: 22px;
+  overflow: hidden;
+}
 
-.bullets{ margin:8px 0 0 18px; }
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-.detail-footer{ margin:28px 0 0; }
-.btn{ background:var(--main_color_main_3,#56afdf); color:#fff; border:none; padding:10px 14px; border-radius:12px; text-decoration:none; display:inline-block; }
-.btn:hover{ filter:brightness(.95); }
+.hero-info h1 {
+  margin: 0 0 6px;
+  font-size: 2rem;
+}
 
-@media (max-width: 1024px){
-  .detail-hero{ grid-template-columns:1fr; }
-  .detail-gallery{ grid-template-columns: repeat(2,1fr); }
-  .detail-split{ grid-template-columns:1fr; }
+.hero-info .subtitle {
+  color: var(--sub, #0f172a);
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.hero-info .lead {
+  color: #374151;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+/* ===============================
+   Chips (Industry / Year / Tech)
+================================ */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+/* 기본 칩 (industry, year, tech 공통) */
+.chip {
+  background: rgba(86, 175, 223, 0.18);          /* 저채도 파스텔 블루 */
+  color: #0f172a;                                /* 네이비 */
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(86, 175, 223, 0.28);    /* 연한 테두리 */
+}
+
+/* 메인 칩 (기술 스택) */
+.chip.main {
+  background: rgba(86, 175, 223, 0.2);           /* 살짝 더 강조 */
+  color: #0f172a;
+  border: 1px solid rgba(86, 175, 223, 0.35);
+}
+
+/* ===============================
+   Roles
+================================ */
+.roles {
+  margin-top: 8px;
+}
+
+.roles ul {
+  margin: 6px 0 0 18px;
+}
+
+/* ===============================
+   Gallery
+================================ */
+.detail-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.detail-gallery figure {
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.detail-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===============================
+   Split Cards
+================================ */
+.detail-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+/* Steps */
+.steps {
+  counter-reset: s;
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+/* 리스트 한 줄 정렬 */
+.steps li {
+  display: flex;
+  gap: 10px;
+  align-items: center;      /* flex-start → center */
+  margin: 8px 0;
+}
+
+/* 번호 배지 (최종 사이즈 + 미세 보정) */
+.steps .num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+
+  background: rgba(86, 175, 223, 0.16);
+  color: #0f172a;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  flex: 0 0 22px;
+  border: 1px solid rgba(86, 175, 223, 0.22);
+}
+
+
+/* bullets */
+.bullets {
+  margin: 8px 0 0 18px;
+}
+
+/* ===============================
+   Footer
+================================ */
+.detail-footer {
+  margin: 28px 0 0;
+}
+
+.btn {
+  background: var(--main_color_main_3, #56afdf);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  filter: brightness(0.95);
+}
+
+/* ===============================
+   Responsive
+================================ */
+@media (max-width: 1024px) {
+  .detail-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detail-split {
+    grid-template-columns: 1fr;
+  }
 }
