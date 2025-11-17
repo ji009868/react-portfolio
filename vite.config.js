@@ -1,8 +1,7 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/react-portfolio/", // 여기에 Repository 경로를 추가
-})
+  base: "/react-portfolio/", // 깃허브 리포 이름
+});
