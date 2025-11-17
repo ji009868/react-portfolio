@@ -29,7 +29,7 @@ export default function Skills() {
               <h4>CSS</h4>
               <ul>
                 <li>Flexbox·Grid를 활용한 반응형 레이아웃 설계</li>
-                <li><code>@keyframes</code> 기반 인터랙션 및 애니메이션 구현</li>
+                <li>@keyframes 기반 인터랙션 및 애니메이션 구현</li>
                 <li>Media Query 적용을 통한 다양한 해상도 대응</li>
               </ul>
             </div>
@@ -38,7 +38,7 @@ export default function Skills() {
               <h4>JavaScript (ES6+)</h4>
               <ul>
                 <li>DOM 조작 및 이벤트 처리 로직 구현</li>
-                <li><code>fetch</code> + <code>async/await</code> 기반 비동기 통신 구성</li>
+                <li>fetch + async/await 기반 비동기 통신 구성</li>
                 <li>모듈화·함수형 패턴을 활용한 재사용 가능한 코드 설계</li>
               </ul>
             </div>
@@ -65,17 +65,8 @@ export default function Skills() {
               <h4>접근성 (A11y)</h4>
               <ul>
                 <li>시맨틱 구조, 포커스 순서, 키보드 탐색 최적화</li>
-                <li>명도 대비(AA) 및 ARIA 속성 적용</li>
+                <li>명도 대비 및 ARIA 속성 적용</li>
                 <li>스크린리더 환경 대응을 위한 대화형 요소 설계</li>
-              </ul>
-            </div>
-
-            <div className="card skill-card">
-              <h4>퍼포먼스</h4>
-              <ul>
-                <li>Lighthouse·Web Vitals 기반 렌더링 성능 개선</li>
-                <li>이미지 포맷·사이즈 최적화 및 지연 로딩 적용</li>
-                <li>useMemo·useCallback 활용을 통한 리렌더 최소화</li>
               </ul>
             </div>
 
@@ -89,20 +80,9 @@ export default function Skills() {
             </div>
 
             <div className="card skill-card">
-              <h4>툴링 · 빌드</h4>
-              <ul>
-                <li>Vite 환경 구성 및 플러그인 설정</li>
-                <li>ESLint·Prettier 적용을 통한 코드 스타일 일관화</li>
-                <li>소스맵·번들 분석을 통한 성능 병목 개선</li>
-              </ul>
-            </div>
-
-            <div className="card skill-card">
               <h4>Git / GitHub</h4>
               <ul>
                 <li>GitHub Flow 기반 브랜치 전략 및 협업 워크플로우 운영</li>
-                <li>릴리즈 태깅·체인지로그 관리</li>
-                <li>Issue·Projects를 활용한 작업 단위 관리</li>
               </ul>
             </div>
 
@@ -112,15 +92,6 @@ export default function Skills() {
                 <li>Auth·Firestore·Storage·Hosting 통합 연동</li>
                 <li>보안 규칙·인덱싱 설정을 통한 데이터 접근 제어</li>
                 <li>Firebase Functions 기반 백엔드 로직 구현</li>
-              </ul>
-            </div>
-
-            <div className="card skill-card">
-              <h4>테스트</h4>
-              <ul>
-                <li>Vitest + React Testing Library 기반 단위 테스트 구성</li>
-                <li>핵심 훅·유틸리티 테스트 코드 작성</li>
-                <li>CI 환경 테스트 통합을 통한 품질 검증</li>
               </ul>
             </div>
           </div>
@@ -134,23 +105,6 @@ export default function Skills() {
             Sub Skills
           </h2>
           <div className="skill-grid">
-            <div className="card skill-card">
-              <h4>Next.js</h4>
-              <ul>
-                <li>SSR / SSG 적용을 통한 초기 로딩 및 SEO 개선</li>
-                <li>App Router 기반 데이터 패칭 구조 설계</li>
-                <li>Next/Image 최적화 및 정적 자원 관리</li>
-              </ul>
-            </div>
-
-            <div className="card skill-card">
-              <h4>스타일링 시스템</h4>
-              <ul>
-                <li>Tailwind / Styled-Components를 활용한 디자인 시스템 구축</li>
-                <li>컴포넌트 단위 UI 재사용 구조 설계</li>
-                <li>다크모드 및 테마 토글 상태 관리 적용</li>
-              </ul>
-            </div>
 
             <div className="card skill-card">
               <h4>Figma 협업</h4>
@@ -192,9 +146,7 @@ export default function Skills() {
             <div className="card skill-card">
               <h4>제2외국어</h4>
               <ul>
-                <li>일본어 JLPT N3 수준 독해 및 기본 커뮤니케이션 활용</li>
-                <li>기술 문서 해석 및 프로젝트 적용</li>
-                <li>해외 레퍼런스 기반 기능 분석 및 구현</li>
+                <li>일본어 JLPT N3 수준 독해 및 기본 커뮤니케이션</li>
               </ul>
             </div>
           </div>

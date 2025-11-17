@@ -80,6 +80,7 @@
   letter-spacing: -0.02em;
   font-size: clamp(48px, 9vw, 120px);
   animation: fadeUp 1.2s ease forwards;
+  color: #fff;
 }
 
 .sub {
@@ -138,6 +139,7 @@
   margin: 0 0 6px;
   font-weight: 700;
   opacity: 0.95;
+  color: #ffffff;
 }
 
 .email {

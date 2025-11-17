@@ -70,10 +70,6 @@ export default function PortfolioDetail() {
           </ul>
         </div>
       </section>
-
-      <footer className="detail-footer">
-        <Link className="btn" to="/portfolio">← 프로젝트 목록</Link>
-      </footer>
     </main>
   );
 }
