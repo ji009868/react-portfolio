@@ -89,11 +89,9 @@ export default function About() {
         <article className="card about-card cta-card">
           <div>
             <h2 className="cta-title">
-              새로운 웹 프로젝트를 함께 만들고 싶다면
+              Interested in working together?
             </h2>
             <p className="muted">
-              간단한 아이디어라도 괜찮습니다. 기획·디자인 단계부터
-              프론트엔드 구현까지 같이 고민해 드립니다.
             </p>
           </div>
           <a

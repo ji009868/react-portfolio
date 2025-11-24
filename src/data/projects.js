@@ -19,7 +19,7 @@ const projects = [
     ],
     results: [
       "프롬프트 튜닝으로 ‘키워드-이미지’ 일치율 체감 향상",
-      "전시 기간 평균 대기시간 20% 단축(로딩 최적화)",
+      "전시 기간 평균 대기시간 단축(로딩 최적화)",
       "참여자 피드백 기반 UI 배치 개선",
     ],
   },
@@ -40,12 +40,12 @@ const projects = [
       "DB 연동: MongoDB Atlas 연결 및 예측/투표/장바구니 CRUD 구현",
       "API 설계: /predict, /review, /shop 등 REST API 구성",
       "View Layer: EJS 템플릿 엔진을 활용한 SSR 페이지 렌더링",
-      "기능 구현: 로그인, 예측, 리뷰, 쇼핑, 마이존 기능 제작 중",
+      "기능 구현: 로그인, 예측, 리뷰, 쇼핑, 마이존 기능 제작",
     ],
     results: [
       "회원별 예측/리뷰/장바구니 데이터를 통합 관리",
       "Express 미들웨어(requestTime) 활용 카운트다운 타이머 구현",
-      "DB 연동 및 라우팅 정상 작동 — UI 및 세부 기능 개발 중",
+      "DB 연동 및 라우팅 정상 작동 — UI 및 세부 기능 개발",
     ],
   },
   {
@@ -69,8 +69,7 @@ const projects = [
     ],
     results: [
       "SVG 애니메이션 완성 — 스크롤 기반 전환 효과 구현",
-      "텍스트 애니메이션 및 시각효과 통합 중",
-      "최종 인터랙션 완성 후 영상 클립으로 전환 예정",
+      "텍스트 애니메이션 및 시각효과 통합"
     ],
   },
   {
@@ -83,14 +82,14 @@ const projects = [
       "각국의 소도시를 이미지 중심으로 소개하는 React 기반 여행 가이드. 추천/저장 플로우와 반응형 레이아웃 설계.",
     role: ["Front-end", "UI/UX"],
     tech: ["React", "React Router", "Responsive"],
-    cover: "/thumb_triptiny.png",   // ✅
+    cover: "/thumb_triptiny.png",  
     gallery: ["/t_01.jpg", "/t_02.jpg"],
     process: [
       "리서치: 소도시 데이터 구조 및 카드 디자인",
       "개발: 리스트/상세 라우팅, 상태 공유",
-      "테스트: 모바일 우선 반응형 최적화",
+      "테스트: 모바일 우선 반응형 최적화"
     ],
-    results: ["체류 시간 증가, 이탈률 감소", "추천 리스트 저장 기능 추가"],
+    results: ["체류 시간 증가, 이탈률 감소", "추천 리스트 저장 기능 추가"]
   },
   {
     id: "sasha-sloan",
@@ -102,7 +101,7 @@ const projects = [
       "뮤지션 소개 3페이지 사이트. JS 없이 CSS 전환만으로 부드러운 페이지 전환 구현.",
     role: ["Design", "Markup"],
     tech: ["HTML", "CSS"],
-    cover: "/thumb_sasha.png",      // ✅
+    cover: "/thumb_sasha.png",  
     gallery: ["/s_01.jpg", "/s_02.jpg"],
     process: ["콘셉트 보드", "레이아웃/타이포", "CSS 전환 설계"],
     results: ["경량 페이지(로딩 빠름)", "명확한 정보 구조"],

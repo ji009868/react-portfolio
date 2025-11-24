@@ -18,12 +18,11 @@ function App() {
             <span>BAE JUNIL</span>
           </div>
           <nav>
-            <Link to="/about">나에 대해</Link>
-            <Link to="/skills">기술 스택</Link>
-            {/* <Link to="/experience">경험</Link>  👉 삭제 */}
-            <Link to="/portfolio">포트폴리오</Link>
-            <Link to="/history">이력</Link>
-            <Link to="/contact">연락하기</Link>
+            <Link to="/about">About</Link>
+            <Link to="/skills">Skills</Link>
+            <Link to="/portfolio">Portfolio</Link>
+            <Link to="/history">History</Link>
+            <Link to="/contact">Contact</Link>
           </nav>
         </div>
       </header>
@@ -34,7 +33,6 @@ function App() {
           <Route path="/" element={<About />} />
           <Route path="/about" element={<About />} />
           <Route path="/skills" element={<Skills />} />
-          {/* <Route path="/experience" element={<Experience />} /> 👉 삭제 */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/history" element={<History />} />
           <Route path="/portfolio" element={<Portfolio />} />
@@ -45,7 +43,7 @@ function App() {
       {/* 푸터 */}
       <footer className="site-footer">
         <div className="container">
-          © {new Date().getFullYear()} Bae Junil
+          © {new Date().getFullYear()} BAE JUNIL
         </div>
       </footer>
     </>
