@@ -1,3 +1,5 @@
+// src/main.jsx
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
@@ -6,7 +8,8 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/react-portfolio/">  {/* 이 부분을 수정 */}
+    {/* 💡 [필수 수정] basename을 GitHub 저장소 이름과 일치시킴 */}
+    <BrowserRouter basename="/react-portfolio/">
       <App />
     </BrowserRouter>
   </React.StrictMode>,
