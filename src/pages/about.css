@@ -1,5 +1,12 @@
-.about-page {
+/* =========================
+   About Page Layout
+========================= */
+.page.about-page {
   padding-bottom: 80px;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  overflow-x: hidden;
 }
 
 /* =========================
@@ -8,7 +15,7 @@
 .hero-section {
   position: relative;
   width: 100%;
-  min-height: 80vh; /* 화면 높이의 80% */
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,6 +31,7 @@
   z-index: 2;
   padding: 0 20px;
   max-width: 800px;
+  animation: fadeUp 1s ease forwards;
 }
 
 .hero-badge {
@@ -33,28 +41,38 @@
   text-transform: uppercase;
   font-size: 0.9rem;
   margin-bottom: 16px;
+  display: inline-block;
+  padding: 6px 12px;
+  background: rgba(86, 175, 223, 0.1);
+  border-radius: 20px;
 }
 
 .hero-title {
   font-size: clamp(40px, 6vw, 72px);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.15;
   color: var(--sub);
   margin: 0 0 24px;
   word-break: keep-all;
 }
 
 .text-gradient {
-  background: linear-gradient(90deg, var(--sub) 0%, var(--primary) 100%);
+  background: linear-gradient(135deg, var(--sub) 0%, var(--primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .hero-desc {
-  font-size: clamp(16px, 2.5vw, 20px);
+  font-size: clamp(18px, 2.5vw, 24px);
   color: var(--muted);
   line-height: 1.6;
   margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.hero-desc strong {
+  color: var(--sub);
+  font-weight: 700;
 }
 
 .hero-bg-text {
@@ -62,39 +80,47 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 25vw;
+  font-size: 20vw;
   font-weight: 900;
   color: rgba(15, 23, 42, 0.03);
   z-index: 1;
   pointer-events: none;
   user-select: none;
+  white-space: nowrap;
+  letter-spacing: -0.05em;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
 /* =========================
    Bento Grid Layout
 ========================= */
-.about-grid {
+.container.about-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(240px, auto);
+  grid-auto-rows: minmax(260px, auto);
   gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 /* 카드 공통 */
 .card {
   background: var(--card);
-  border-radius: var(--radius);
-  padding: 28px;
-  box-shadow: var(--shadow);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  transition: transform 0.2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 .label {
@@ -102,6 +128,7 @@
   font-weight: 700;
   color: var(--muted);
   text-transform: uppercase;
+  letter-spacing: 0.05em;
   margin-bottom: 12px;
   display: block;
 }
@@ -110,33 +137,149 @@
   margin-top: auto;
   font-weight: 600;
   color: var(--primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
-/* 개별 카드 배치 */
+.link-arrow:hover {
+  text-decoration: underline;
+}
+
+/* 1. Identity Card (너비 2칸) */
 .id-card {
   grid-column: span 2;
   background: linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
 }
 
 .id-card .name {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 800;
+  margin: 0 0 12px;
+  color: var(--sub);
+  letter-spacing: -0.02em;
+}
+
+.role-desc {
+  font-size: 1.1rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* 2. Education Card (수정됨: 너비 2칸으로 확장) */
+.edu-card {
+  grid-column: span 2; /* span 1 -> span 2 변경 */
+}
+
+.card-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
   margin: 0 0 8px;
   color: var(--sub);
 }
 
-.edu-card {
-  grid-column: span 1;
+.card-text {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.5;
+  margin-bottom: 8px;
 }
 
+.card-subtext {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* 3. Showcase Card (너비 2칸) */
 .showcase-card {
   grid-column: span 2;
 }
 
-.tech-card {
-  grid-column: span 1;
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
+.more-link {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.showcase-thumbs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  height: 100%;
+}
+
+.thumb-item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+  min-height: 140px;
+  background: #f1f5f9;
+}
+
+.thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.thumb-item:hover img {
+  transform: scale(1.08);
+}
+
+.thumb-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: #fff;
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* 4. Tech Card (수정됨: 너비 2칸으로 확장) */
+.tech-card {
+  grid-column: span 2; /* span 1 -> span 2 변경 */
+}
+
+.tech-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tech-group strong {
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 8px;
+  color: var(--sub);
+}
+
+.tech-group .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech-group .tags span {
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  background: rgba(15, 23, 42, 0.05);
+  border-radius: 8px;
+  color: var(--sub);
+  font-weight: 500;
+}
+
+/* 5. CTA Card (너비 4칸 = 전체) */
 .cta-card {
   grid-column: span 4;
   flex-direction: row;
@@ -146,96 +289,46 @@
   color: #fff;
 }
 
-.cta-card h2 {
+.cta-content h2 {
   color: #fff;
-  margin: 0 0 4px;
+  font-size: 1.8rem;
+  margin: 0 0 6px;
 }
-.cta-card p {
-  color: rgba(255,255,255,0.7);
+
+.cta-content p {
+  color: rgba(255, 255, 255, 0.7);
   margin: 0;
 }
 
-/* Showcase Thumbnails */
-.card-header-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-}
-
-.more-link {
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-.showcase-thumbs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  height: 100%;
-}
-
-.thumb-item {
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  height: 140px;
-}
-
-.thumb-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s;
-}
-
-.thumb-item:hover img {
-  transform: scale(1.05);
-}
-
-.thumb-overlay {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  padding: 8px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  backdrop-filter: blur(4px);
-}
-
-/* Tech List */
-.tech-list-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.tech-group strong {
-  font-size: 0.9rem;
-  display: block;
-  margin-bottom: 6px;
-}
-.tech-group .tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-.tech-group .tags span {
-  font-size: 0.8rem;
-  padding: 4px 8px;
-  background: #f1f5f9;
-  border-radius: 6px;
-  color: var(--sub);
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .about-grid { grid-template-columns: repeat(2, 1fr); }
+  .container.about-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* 태블릿에서도 2칸씩 차지하게 하여 꽉 채움 */
+  .id-card { grid-column: span 2; }
+  .edu-card { grid-column: span 2; }
+  .tech-card { grid-column: span 2; }
+  .showcase-card { grid-column: span 2; }
   .cta-card { grid-column: span 2; }
 }
 
 @media (max-width: 640px) {
-  .about-grid { display: flex; flex-direction: column; }
-  .cta-card { flex-direction: column; align-items: flex-start; gap: 16px; }
-  .hero-title { font-size: 40px; }
+  .container.about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hero-title { font-size: 36px; }
+  .cta-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
 }

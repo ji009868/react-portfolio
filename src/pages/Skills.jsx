@@ -5,7 +5,7 @@ export default function Skills() {
     <main className="page skills-page">
       <section className="skills-section container">
         <header className="skills-header">
-          <h1 className="title">Skills &amp; Tools</h1>
+          <h1 className="title">Skills & Tools</h1>
         </header>
 
         {/* =========================
@@ -19,79 +19,125 @@ export default function Skills() {
             <div className="card skill-card">
               <h4>HTML</h4>
               <ul>
-                <li>시맨틱 태그 구조 설계 및 접근성 고려 마크업 구현</li>
-                <li>header, nav, main, article, aside, footer 요소 배치</li>
-                <li>폼·미디어·테이블 요소 구성 및 레이블·대체 텍스트 적용</li>
+                <li>
+                  <span className="highlight">시맨틱 태그</span> 구조 설계 및{" "}
+                  <span className="highlight">접근성(A11y)</span>을 고려한 마크업
+                </li>
+                <li>header, nav, main 등 의미론적 요소의 적절한 배치</li>
+                <li>
+                  폼·테이블 요소의 <span className="highlight">웹 표준 준수</span>{" "}
+                  및 대체 텍스트 적용
+                </li>
               </ul>
             </div>
 
             <div className="card skill-card">
               <h4>CSS</h4>
               <ul>
-                <li>Flexbox·Grid를 활용한 반응형 레이아웃 설계</li>
-                <li>@keyframes 기반 인터랙션 및 애니메이션 구현</li>
-                <li>Media Query 적용을 통한 다양한 해상도 대응</li>
+                <li>
+                  Flexbox·Grid를 활용한{" "}
+                  <span className="highlight">반응형 레이아웃</span> 설계
+                </li>
+                <li>
+                  Keyframes 및 Transition을 이용한{" "}
+                  <span className="highlight">인터랙션 애니메이션</span> 구현
+                </li>
+                <li>Media Query를 적용하여 모바일/태블릿/데스크탑 환경 대응</li>
               </ul>
             </div>
 
             <div className="card skill-card">
               <h4>JavaScript (ES6+)</h4>
               <ul>
-                <li>DOM 조작 및 이벤트 처리 로직 구현</li>
-                <li>fetch + async/await 기반 비동기 통신 구성</li>
-                <li>모듈화·함수형 패턴을 활용한 재사용 가능한 코드 설계</li>
+                <li>
+                  <span className="highlight">DOM 조작</span> 및 이벤트 위임 처리
+                </li>
+                <li>
+                  Async/Await 기반의{" "}
+                  <span className="highlight">비동기 데이터 통신</span> 처리
+                </li>
+                <li>ES6 모듈 시스템을 활용한 재사용 가능한 함수 설계</li>
               </ul>
             </div>
 
             <div className="card skill-card">
               <h4>React</h4>
               <ul>
-                <li>Hooks(⟪useState, useEffect, useMemo⟫)를 활용한 SPA 구현</li>
-                <li>컴포넌트 구조 및 상태 흐름 설계</li>
-                <li>로딩·에러 상태 관리 및 UI 전환 애니메이션 구성</li>
+                <li>
+                  <span className="highlight">Hooks</span>(useState, useEffect
+                  등)를 활용한 함수형 컴포넌트 개발
+                </li>
+                <li>
+                  재사용성을 고려한{" "}
+                  <span className="highlight">컴포넌트 분리</span> 및 폴더 구조화
+                </li>
+                <li>Custom Hooks를 활용한 비즈니스 로직 캡슐화</li>
               </ul>
             </div>
 
             <div className="card skill-card">
-              <h4>React Router / 상태관리</h4>
+              <h4>React Ecosystem</h4>
               <ul>
-                <li>중첩 라우팅 및 동적 파라미터 기반 화면 전환 구성</li>
-                <li>Zustand / React Query를 활용한 상태 관리 적용</li>
-                <li>Lazy Loading 및 코드 스플리팅을 통한 초기 로딩 최적화</li>
+                <li>
+                  React Router를 이용한{" "}
+                  <span className="highlight">SPA 라우팅</span> 및 동적 페이지
+                  전환
+                </li>
+                <li>
+                  Zustand/Recoil을 활용한{" "}
+                  <span className="highlight">전역 상태 관리</span>
+                </li>
+                <li>React Query를 이용한 서버 데이터 캐싱 및 동기화</li>
               </ul>
             </div>
 
             <div className="card skill-card">
-              <h4>접근성 (A11y)</h4>
+              <h4>Optimization</h4>
               <ul>
-                <li>시맨틱 구조, 포커스 순서, 키보드 탐색 최적화</li>
-                <li>명도 대비 및 ARIA 속성 적용</li>
-                <li>스크린리더 환경 대응을 위한 대화형 요소 설계</li>
+                <li>
+                  Lazy Loading 및 Code Splitting을 통한{" "}
+                  <span className="highlight">초기 로딩 속도 개선</span>
+                </li>
+                <li>Lighthouse 점수 개선을 위한 이미지 최적화 및 SEO 적용</li>
+                <li>
+                  불필요한 리렌더링 방지(useMemo, useCallback)를 통한 성능 최적화
+                </li>
               </ul>
             </div>
 
             <div className="card skill-card">
-              <h4>API / 네트워킹</h4>
+              <h4>API / Network</h4>
               <ul>
-                <li>RESTful API 통신 및 오류 처리 로직 구성</li>
-                <li>환경 변수(.env) 기반 API 키 관리 및 보안 설정</li>
-                <li>검색·정렬·페이지네이션 비동기 데이터 처리 구현</li>
+                <li>
+                  <span className="highlight">RESTful API</span> 연동 및 에러
+                  핸들링
+                </li>
+                <li>환경 변수(.env)를 활용한 API 키 보안 관리</li>
+                <li>Axios/Fetch API를 활용한 HTTP 요청 모듈화</li>
               </ul>
             </div>
 
             <div className="card skill-card">
-              <h4>Git / GitHub</h4>
+              <h4>Git / Collaboration</h4>
               <ul>
-                <li>GitHub Flow 기반 브랜치 전략 및 협업 워크플로우 운영</li>
+                <li>
+                  <span className="highlight">Git Flow</span> 기반의 브랜치 전략
+                  운영
+                </li>
+                <li>Pull Request(PR) 및 코드 리뷰를 통한 협업 경험</li>
+                <li>Notion/Slack을 활용한 팀 커뮤니케이션</li>
               </ul>
             </div>
 
             <div className="card skill-card">
               <h4>Firebase</h4>
               <ul>
-                <li>Auth·Firestore·Storage·Hosting 통합 연동</li>
-                <li>보안 규칙·인덱싱 설정을 통한 데이터 접근 제어</li>
-                <li>Firebase Functions 기반 백엔드 로직 구현</li>
+                <li>
+                  <span className="highlight">Auth</span>(로그인) 및{" "}
+                  <span className="highlight">Firestore</span>(DB) 연동
+                </li>
+                <li>Storage를 이용한 이미지 업로드 및 관리</li>
+                <li>Hosting을 통한 정적 웹사이트 배포</li>
               </ul>
             </div>
           </div>
@@ -102,31 +148,36 @@ export default function Skills() {
         ========================== */}
         <section aria-labelledby="sub-skills">
           <h2 id="sub-skills" className="section-title">
-            Sub Skills
+            Sub Skills & Tools
           </h2>
           <div className="skill-grid">
             <div className="card skill-card">
-              <h4>Figma 협업</h4>
+              <h4>Figma & Design</h4>
               <ul>
-                <li>디자이너와의 컴포넌트 단위 공동 작업 프로세스 구축</li>
-                <li>간격·색상·타이포 기준 핸드오프 가이드 반영</li>
-                <li>프로토타입 기반 인터랙션 정의 및 구현</li>
+                <li>
+                  디자이너와의 <span className="highlight">핸드오프</span> 프로세스
+                  이해
+                </li>
+                <li>디자인 시스템(컬러, 타이포, 간격)의 코드로의 이식</li>
+                <li>프로토타이핑 툴 활용 및 UI 기획 참여</li>
               </ul>
             </div>
 
             <div className="card skill-card">
-              <h4>간단한 백엔드</h4>
+              <h4>Backend Basic</h4>
               <ul>
-                <li>Express·Firebase Functions 기반 REST API 구성</li>
-                <li>라우팅·미들웨어 구조 설계 및 요청 검증 로직 적용</li>
-                <li>로그·모니터링 환경 구축을 통한 안정성 확보</li>
+                <li>
+                  Node.js/Express를 활용한 간단한{" "}
+                  <span className="highlight">REST API 서버</span> 구축
+                </li>
+                <li>MongoDB/Mongoose를 이용한 데이터 스키마 설계 경험</li>
               </ul>
             </div>
           </div>
         </section>
 
         {/* =========================
-            ETC — 확장 역량
+            ETC
         ========================== */}
         <section aria-labelledby="etc-skills">
           <h2 id="etc-skills" className="section-title">
@@ -134,18 +185,20 @@ export default function Skills() {
           </h2>
           <div className="skill-grid">
             <div className="card skill-card">
-              <h4>디자인 툴</h4>
+              <h4>Creative Tools</h4>
               <ul>
-                <li>Photoshop·Illustrator·After Effects를 활용한 그래픽·모션 제작</li>
-                <li>3ds Max 모델링·렌더링 기초 작업 경험</li>
-                <li>브랜딩 가이드 → UI 토큰 변환 및 적용</li>
+                <li>
+                  Photoshop·Illustrator를 활용한{" "}
+                  <span className="highlight">그래픽 에셋 편집</span>
+                </li>
+                <li>After Effects를 이용한 모션 그래픽 이해</li>
               </ul>
             </div>
 
             <div className="card skill-card">
-              <h4>제2외국어</h4>
+              <h4>Language</h4>
               <ul>
-                <li>일본어 JLPT N3 수준 독해 및 기본 커뮤니케이션</li>
+                <li>일본어 JLPT N3 (기본 회화 및 독해 가능)</li>
               </ul>
             </div>
           </div>
