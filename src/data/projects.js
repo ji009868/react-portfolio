@@ -6,7 +6,7 @@ const projects = [
     year: "2025",
     industry: "Interactive / Exhibition",
     description:
-      "AI 기반으로 개인의 감성을 해석해 ‘정서적 고향’ 이미지를 생성하는 인터랙티브 키오스크. React + Firebase로 제작하고 Electron으로 전시용 앱 패키징.",
+      "AI 기반으로 개인의 감성을 해석해 ‘정서적 고향’ 이미지를 생성하는 인터랙티브 키오스크. React + Firebase로 제작하고 Electron으로 전시용 앱 패키징",
     role: ["Front-end", "Prompt Design", "Firebase"],
     tech: ["React", "Firebase", "Firestore", "Functions", "Electron"],
     cover: "/project_h.png",   // ✅ public/project_h.png
@@ -30,7 +30,7 @@ const projects = [
     year: "2025",
     industry: "Web / Server Programming",
     description:
-      "Node.js와 Express로 개발 중인 F1 팬 커뮤니티 웹사이트입니다. 경기 예측, 리뷰, 굿즈 쇼핑, 마이존 기능을 통해 팬들이 소통하고 참여할 수 있는 플랫폼을 구축하고 있습니다.",
+      "Node.js와 Express로 개발 중인 F1 팬 커뮤니티 웹사이트. 경기 예측, 리뷰, 굿즈 쇼핑, 마이존 기능을 통해 팬들이 소통하고 참여할 수 있는 플랫폼 구축",
     role: ["Full-stack", "Server Programming", "Database"],
     tech: ["Node.js", "Express", "MongoDB", "REST API"],
     cover: "/4.png",          // ✅ public/4.png
@@ -55,7 +55,7 @@ const projects = [
     year: "2025",
     industry: "Web Interaction / Motion Design",
     description:
-      "영화 ‘백 투 더 퓨처’의 타임머신을 모티브로 한 인터랙티브 웹 프로젝트입니다. ‘시간여행을 통한 추억 회상’을 주제로, SVG 애니메이션과 3D Transform을 활용해 감성적인 몰입 경험을 연출하고 있습니다.",
+      "영화 ‘백 투 더 퓨처’의 타임머신을 모티브로 한 인터랙티브 웹 프로젝트 ‘시간여행을 통한 추억 회상’을 주제로, SVG 애니메이션과 3D Transform을 활용해 감성적인 몰입 경험 연출",
     role: ["Front-end", "Animation Design", "JS Logic"],
     tech: ["HTML", "CSS", "JavaScript", "SVG Animation"],
     cover: "/5.png",          // ✅ public/5.png
