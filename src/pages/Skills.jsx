@@ -50,7 +50,7 @@ export default function Skills() {
               <h4>JavaScript (ES6+)</h4>
               <ul>
                 <li>
-                  <span className="highlight">DOM 조작</span> 및 이벤트 위임 처리
+                  <span className="highlight">DOM 조작</span> 및 <span className="highlight">이벤트 위임</span> 처리
                 </li>
                 <li>
                   Async/Await 기반의{" "}
@@ -69,7 +69,7 @@ export default function Skills() {
                 </li>
                 <li>
                   재사용성을 고려한{" "}
-                  <span className="highlight">컴포넌트 분리</span> 및 폴더 구조화
+                  <span className="highlight">컴포넌트 분리</span> 및 <span className="highlight">폴더 구조화</span>
                 </li>
                 <li>Custom Hooks를 활용한 비즈니스 로직 캡슐화</li>
               </ul>
@@ -80,14 +80,14 @@ export default function Skills() {
               <ul>
                 <li>
                   React Router를 이용한{" "}
-                  <span className="highlight">SPA 라우팅</span> 및 동적 페이지
+                  <span className="highlight">SPA 라우팅</span> 및 <span className="highlight">동적 페이지 전환</span>
                   전환
                 </li>
                 <li>
                   Zustand/Recoil을 활용한{" "}
                   <span className="highlight">전역 상태 관리</span>
                 </li>
-                <li>React Query를 이용한 서버 데이터 캐싱 및 동기화</li>
+                <li>React Query를 이용한 <span className="highlight">서버 데이터 캐싱</span> 및 <span className="highlight">동기화</span></li>
               </ul>
             </div>
 
@@ -155,7 +155,7 @@ export default function Skills() {
               <h4>Figma & Design</h4>
               <ul>
                 <li>
-                  디자이너와의 <span className="highlight">핸드오프</span> 프로세스
+                  디자이너와의 핸드오프 프로세스
                   이해
                 </li>
                 <li>디자인 시스템(컬러, 타이포, 간격)의 코드로의 이식</li>
@@ -167,8 +167,8 @@ export default function Skills() {
               <h4>Backend Basic</h4>
               <ul>
                 <li>
-                  Node.js/Express를 활용한 간단한{" "}
-                  <span className="highlight">REST API 서버</span> 구축
+                  <span className="highlight">Node.js/Express</span>를 활용한 간단한{" "}
+                  REST API 서버 구축
                 </li>
                 <li>MongoDB/Mongoose를 이용한 데이터 스키마 설계 경험</li>
               </ul>
@@ -188,17 +188,17 @@ export default function Skills() {
               <h4>Creative Tools</h4>
               <ul>
                 <li>
-                  Photoshop·Illustrator를 활용한{" "}
-                  <span className="highlight">그래픽 에셋 편집</span>
+                  <span className="highlight">Photoshop·Illustrator</span>를 활용한{" "}
+                  그래픽 에셋 편집
                 </li>
-                <li>After Effects를 이용한 모션 그래픽 이해</li>
+                <li><span className="highlight">After Effects</span>를 이용한 모션 그래픽 이해</li>
               </ul>
             </div>
 
             <div className="card skill-card">
               <h4>Language</h4>
               <ul>
-                <li>일본어 JLPT N3 (기본 회화 및 독해 가능)</li>
+                <li>일본어 <span className="highlight">JLPT N3</span> (기본 회화 및 독해 가능)</li>
               </ul>
             </div>
           </div>
