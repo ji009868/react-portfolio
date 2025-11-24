@@ -1,4 +1,12 @@
 /* ===============================
+   Page Layout
+================================ */
+.detail-page {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ===============================
    Top Bar
 ================================ */
 .detail-topbar {
@@ -12,11 +20,12 @@
 }
 
 .ghost {
-  background: transparent;
+  background: #ffffff;
   border: 1px solid rgba(15, 23, 42, 0.15);
   padding: 8px 12px;
   border-radius: 10px;
   cursor: pointer;
+  font: inherit;
 }
 
 /* ===============================
@@ -33,6 +42,7 @@
 .hero-media {
   border-radius: 22px;
   overflow: hidden;
+  background: #e5edf7;
 }
 
 .hero-media img {
@@ -110,6 +120,7 @@
   margin: 0;
   border-radius: 16px;
   overflow: hidden;
+  background: #e5edf7;
 }
 
 .detail-gallery img {
@@ -128,8 +139,9 @@
   gap: 16px;
 }
 
-.card {
-  background: #fff;
+/* 로컬 card (전역 card와 겹쳐도 동일 톤) */
+.detail-split .card {
+  background: var(--card, #ffffff);
   border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 18px;
   padding: 18px;
@@ -169,7 +181,6 @@
   border: 1px solid rgba(86, 175, 223, 0.22);
 }
 
-
 /* bullets */
 .bullets {
   margin: 8px 0 0 18px;
@@ -190,6 +201,7 @@
   border-radius: 12px;
   text-decoration: none;
   display: inline-block;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -209,6 +221,12 @@
   }
 
   .detail-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .detail-gallery {
     grid-template-columns: 1fr;
   }
 }

@@ -12,7 +12,9 @@ export default function PortfolioDetail() {
       <main className="page">
         <h2>Not Found</h2>
         <p>프로젝트를 찾을 수 없습니다.</p>
-        <Link className="btn" to="/portfolio">← Back to Portfolio</Link>
+        <Link className="btn" to="/portfolio">
+          ← Back to Portfolio
+        </Link>
       </main>
     );
   }
@@ -20,7 +22,9 @@ export default function PortfolioDetail() {
   return (
     <main className="page detail-page">
       <div className="detail-topbar">
-        <button className="ghost" onClick={() => nav(-1)}>← Back</button>
+        <button className="ghost" onClick={() => nav(-1)}>
+          ← Back
+        </button>
         <div className="spacer" />
         <span className="chip">{p.industry}</span>
         <span className="chip">{p.year}</span>
@@ -36,12 +40,18 @@ export default function PortfolioDetail() {
           <p className="lead">{p.description}</p>
           <div className="chips">
             {p.tech.map((t) => (
-              <span key={t} className="chip main">{t}</span>
+              <span key={t} className="chip main">
+                {t}
+              </span>
             ))}
           </div>
           <div className="roles">
             <strong>Role</strong>
-            <ul>{p.role.map((r) => <li key={r}>{r}</li>)}</ul>
+            <ul>
+              {p.role.map((r) => (
+                <li key={r}>{r}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </header>
@@ -58,15 +68,22 @@ export default function PortfolioDetail() {
 
       <section className="detail-split">
         <div className="card">
-          <h3>Process & Workflow</h3>
+          <h3>Process &amp; Workflow</h3>
           <ol className="steps">
-            {p.process.map((s, i) => <li key={i}><span className="num">{i+1}</span>{s}</li>)}
+            {p.process.map((s, i) => (
+              <li key={i}>
+                <span className="num">{i + 1}</span>
+                {s}
+              </li>
+            ))}
           </ol>
         </div>
         <div className="card">
-          <h3>Result & Impact</h3>
+          <h3>Result &amp; Impact</h3>
           <ul className="bullets">
-            {p.results.map((r, i) => <li key={i}>{r}</li>)}
+            {p.results.map((r, i) => (
+              <li key={i}>{r}</li>
+            ))}
           </ul>
         </div>
       </section>
