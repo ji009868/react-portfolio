@@ -2,13 +2,13 @@
    Local Tokens (Contact 전용)
 ================================ */
 :root {
-  --main-color: #56afdf;     /* Primary */
-  --accent-color: #ffd25f;   /* Accent */
+  --main-color: #56afdf; /* Primary */
+  --accent-color: #ffd25f; /* Accent */
   --text-color: #0f172a;
 
   /* 실제 헤더/푸터 높이에 맞추면 높이 계산이 정확해짐 */
-  --header-h: 64px;  /* index.css .nav 높이와 일치 */
-  --footer-h: 80px;  /* 사이트 푸터 영역 여유치 */
+  --header-h: 64px; /* index.css .nav 높이와 일치 */
+  --footer-h: 80px; /* 사이트 푸터 영역 여유치 */
 }
 
 /* ================================
@@ -17,12 +17,12 @@
 ================================ */
 .page.contact-page {
   /* 전역 .page의 폭 제한을 해제해 화면 전체 채움 */
-  max-width: none;          /* ✅ 컨테이너 해제 */
+  max-width: none;
   width: 100%;
   margin: 0;
   padding: 0;
 
-  background: var(--main-color);  /* ✅ Contact 페이지만 파란 배경 */
+  background: var(--main-color); /* Contact 페이지만 파란 배경 */
   color: #fff;
 
   min-height: 100vh;
@@ -50,7 +50,7 @@
   min-height: calc(100vh - var(--header-h) - var(--footer-h));
   display: grid;
   align-content: center;
-  background: var(--main-color);   /* 여분 영역도 동일 색 */
+  background: var(--main-color); /* 여분 영역도 동일 색 */
 }
 
 .contact-block {
@@ -163,6 +163,7 @@
   opacity: 0.9;
   transition: opacity 0.2s;
 }
+
 .links a:hover {
   opacity: 1;
   text-decoration: underline;
@@ -173,22 +174,40 @@
    Keyframes
 ================================ */
 @keyframes fadeUp {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeWord {
-  0% { opacity: 0; transform: translateY(40px) scale(0.95); }
-  100% { opacity: 0.15; transform: translateY(0) scale(1); }
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  100% {
+    opacity: 0.15;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* ================================
    Responsive
 ================================ */
 @media (max-width: 1024px) {
-  .contact-block { grid-template-columns: 1fr; }
-  .headline { font-size: clamp(40px, 12vw, 80px); }
-  .wordmark { font-size: clamp(120px, 32vw, 220px); }
+  .contact-block {
+    grid-template-columns: 1fr;
+  }
+  .headline {
+    font-size: clamp(40px, 12vw, 80px);
+  }
+  .wordmark {
+    font-size: clamp(120px, 32vw, 220px);
+  }
 }
 
 /* ================================

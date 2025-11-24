@@ -8,40 +8,49 @@ export default function About() {
         <article className="card about-card id-card">
           <div className="id-top">
             <div className="role">Frontend Developer</div>
-            <h1 className="name">Bae Junil</h1>
-            <p className="brief">
-              새로운 기술에 도전하는 프론트엔드 개발자
-            </p>
+            <h1 className="name">BAE JUNIL</h1>
+            <p className="brief">새로운 기술에 도전하는 프론트엔드 개발자</p>
           </div>
-          <a href="/portfolio" className="more">Portfolio ↗</a>
+          <a href="/portfolio" className="more">
+            Portfolio ↗
+          </a>
         </article>
 
-        {/* CREDENTIALS */}
-        <article className="card about-card small-card">
+        {/* CREDENTIALS — 가로 2칸 (wide-card) */}
+        <article className="card about-card small-card wide-card">
           <h3 className="card-title">Credentials</h3>
           <ul className="bullets">
             <li>계원예술대학교 디지털미디어디자인 – 프로그래밍 세부전공</li>
           </ul>
-          <a className="ghost-link" href="/history">More about me ↗</a>
+          <a className="ghost-link" href="/history">
+            More about me ↗
+          </a>
         </article>
 
         {/* SERVICES */}
         <article className="card about-card services-card">
           <h3 className="card-title">Services I Offer</h3>
           <ul className="pills">
-
+            <li>React 기반 웹서비스 개발</li>
+            <li>반응형 UI · 인터랙션 구현</li>
+            <li>Firebase 연동 및 간단한 백엔드</li>
+            <li>기획서·디자인 시안을 코드로 구현</li>
           </ul>
-          <a className="ghost-link" href="/skills">See full skills ↗</a>
+          <a className="ghost-link" href="/skills">
+            See full skills ↗
+          </a>
         </article>
 
-        {/* SHOWCASE */}
-        <article className="card about-card small-card">
+        {/* SHOWCASE — 가로 2칸 (wide-card) */}
+        <article className="card about-card small-card wide-card">
           <h3 className="card-title">Showcase</h3>
           <ul className="bullets">
             <li>Project H — Emotional Hometown Kiosk</li>
             <li>Trip Tiny — Small Town Travel Guide</li>
           </ul>
-          <a className="ghost-link" href="/portfolio">Projects ↗</a>
+          <a className="ghost-link" href="/portfolio">
+            Projects ↗
+          </a>
         </article>
 
         {/* TECH AXIS */}
@@ -49,7 +58,7 @@ export default function About() {
           <h3 className="card-title">Specialization</h3>
           <div className="tech-row">
             <span className="tech">React</span>
-            <span className="tech">HTML,CSS</span>
+            <span className="tech">HTML · CSS</span>
             <span className="tech">JavaScript</span>
           </div>
         </article>
@@ -58,31 +67,34 @@ export default function About() {
         <article className="card about-card social-card">
           <h3 className="card-title">Profiles</h3>
           <div className="link-row">
-            <a href="https://github.com/ji009868" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a
+              href="https://github.com/ji009868"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub ↗
+            </a>
             <a href="mailto:ji009868@naver.com">Email ↗</a>
-            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram ↗</a>
-          </div>
-        </article>
-
-        {/* STATS */}
-        <article className="card about-card stats-card">
-          <div className="stat">
-            <div className="stat-num">02</div>
-            <div className="stat-label">Years learning</div>
-          </div>
-          <div className="stat">
-
-          </div>
-          <div className="stat">
-
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram ↗
+            </a>
           </div>
         </article>
 
         {/* CTA */}
         <article className="card about-card cta-card">
           <div>
-            <h2 className="cta-title"></h2>
-            <p className="muted"></p>
+            <h2 className="cta-title">
+              새로운 웹 프로젝트를 함께 만들고 싶다면
+            </h2>
+            <p className="muted">
+              간단한 아이디어라도 괜찮습니다. 기획·디자인 단계부터
+              프론트엔드 구현까지 같이 고민해 드립니다.
+            </p>
           </div>
           <a
             className="btn btn-accent"

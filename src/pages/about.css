@@ -14,7 +14,7 @@
 /* 카드 공통 */
 .about-card {
   background: var(--card);
-  border: 1px solid rgba(15,23,42,0.06);
+  border: 1px solid rgba(15, 23, 42, 0.06);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: clamp(16px, 2vw, 24px);
@@ -26,7 +26,7 @@
   font-size: 14px;
   font-weight: 800;
   color: var(--muted);
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
 }
 
@@ -37,21 +37,32 @@
   align-content: space-between;
   min-height: 280px;
   background:
-    radial-gradient(1200px 520px at -20% 120%, rgba(86,175,223,.14), transparent),
+    radial-gradient(
+      1200px 520px at -20% 120%,
+      rgba(86, 175, 223, 0.14),
+      transparent
+    ),
     var(--card);
 }
+
 .id-top .role {
   font-weight: 700;
   color: var(--primary);
   margin-bottom: 6px;
 }
+
 .id-top .name {
   font-size: clamp(28px, 4vw, 42px);
   line-height: 1.1;
   color: var(--sub);
   margin: 0 0 8px;
 }
-.id-top .brief { color: var(--text); opacity: .9; }
+
+.id-top .brief {
+  color: var(--text);
+  opacity: 0.9;
+}
+
 .id-card .more {
   justify-self: end;
   color: var(--primary);
@@ -59,80 +70,177 @@
 }
 
 /* 2) 작은 카드들 */
-.small-card { grid-column: span 3; }
+.small-card {
+  grid-column: span 3;
+}
+
+/* Credentials / Showcase 가로 2칸 확장 */
+.wide-card {
+  grid-column: span 6;
+}
 
 /* 3) Services */
-.services-card { grid-column: span 6; }
-.pills {
-  display: flex; flex-wrap: wrap; gap: 8px;
+.services-card {
+  grid-column: span 6;
 }
-.pills li{
-  padding: 6px 10px; border-radius: 999px;
-  background: rgba(44,127,184,.10); color: var(--primary);
-  border: 1px solid rgba(44,127,184,.18); font-size: 12px;
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 4px;
+  padding: 0;
+  list-style: none;
+}
+
+.pills li {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(44, 127, 184, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(44, 127, 184, 0.18);
+  font-size: 12px;
 }
 
 /* 4) Tech axis */
-.tech-card { grid-column: span 4; }
-.tech-row { display:flex; gap:10px; flex-wrap:wrap; }
-.tech{
-  padding: 8px 12px; border-radius: 10px;
-  background: rgba(15,23,42,.06); color: var(--sub);
-  border: 1px solid rgba(15,23,42,.08); font-weight: 700;
+.tech-card {
+  grid-column: span 4;
+}
+
+.tech-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tech {
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.06);
+  color: var(--sub);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  font-weight: 700;
 }
 
 /* 5) Social */
-.social-card { grid-column: span 4; }
-.link-row{ display:flex; gap:14px; flex-wrap:wrap; }
-.link-row a{ color: var(--primary); text-decoration:none; }
-
-/* 6) Stats */
-.stats-card{
+.social-card {
   grid-column: span 4;
-  display:grid; grid-template-columns: repeat(3,1fr); gap:12px;
 }
-.stat{
-  background: rgba(15,23,42,.04);
-  border: 1px solid rgba(15,23,42,.08);
+
+.link-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.link-row a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* 6) Stats (현재 사용 X, 예비 스타일) */
+.stats-card {
+  grid-column: span 4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.stat {
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 12px;
   padding: 16px;
 }
-.stat-num{
-  font-size: clamp(22px,3vw,28px); font-weight: 900; color: var(--sub);
+
+.stat-num {
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 900;
+  color: var(--sub);
 }
-.stat-label{ color: var(--muted); }
+
+.stat-label {
+  color: var(--muted);
+}
 
 /* 7) CTA */
-.cta-card{
+.cta-card {
   grid-column: span 12;
-  display:flex; align-items:center; justify-content:space-between; gap:16px;
-  background:
-    linear-gradient( to right, rgba(86,175,223,.18), transparent 60%),
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: linear-gradient(
+      to right,
+      rgba(86, 175, 223, 0.18),
+      transparent 60%
+    ),
     var(--card);
 }
-.cta-title{
-  font-size: clamp(22px,3.6vw,30px); color: var(--sub); margin:0 0 6px;
+
+.cta-title {
+  font-size: clamp(22px, 3.6vw, 30px);
+  color: var(--sub);
+  margin: 0 0 6px;
 }
-.btn{
-  display:inline-flex; align-items:center; justify-content:center;
-  height:44px; padding:0 18px; border-radius:999px; font-weight:800;
-  border:1px solid rgba(0,0,0,.04); cursor:pointer; text-decoration:none;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-weight: 800;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  text-decoration: none;
 }
-.btn-accent{ background: var(--accent); color: var(--sub); }
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--sub);
+}
 
 /* 공통 */
-.ghost-link{ color: var(--primary); text-decoration:none; }
-.muted{ color: var(--muted); }
+.ghost-link {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.muted {
+  color: var(--muted);
+}
 
 /* 반응형 */
-@media (max-width: 1080px){
-  .id-card{ grid-column: span 12; }
-  .services-card{ grid-column: span 12; }
-  .small-card{ grid-column: span 6; }
-  .tech-card,.social-card{ grid-column: span 6; }
-  .stats-card{ grid-column: span 12; }
+@media (max-width: 1080px) {
+  .id-card {
+    grid-column: span 12;
+  }
+  .services-card {
+    grid-column: span 12;
+  }
+  .small-card {
+    grid-column: span 6;
+  }
+  .wide-card {
+    grid-column: span 12;
+  }
+  .tech-card,
+  .social-card {
+    grid-column: span 6;
+  }
+  .stats-card {
+    grid-column: span 12;
+  }
 }
-@media (max-width: 640px){
-  .stats-card{ grid-template-columns: 1fr; }
-  .cta-card{ flex-direction: column; align-items: flex-start; }
+
+@media (max-width: 640px) {
+  .stats-card {
+    grid-template-columns: 1fr;
+  }
+  .cta-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

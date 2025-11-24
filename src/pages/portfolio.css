@@ -1,115 +1,117 @@
 /* ===============================
    Portfolio Page
 ================================ */
-.portfolio-page { 
-  background: var(--stats-bg,#f5f7fb); 
-  color: var(--stats-text,#0f172a); 
+.portfolio-page {
+  background: var(--bg);
+  color: var(--text);
 }
 
-/* 카드 간 간격 확대 */
-.portfolio-list { 
-  display:flex; 
-  flex-direction:column; 
-  gap:110px;             /* ← 기존 72px → 110px */
-  margin-top:32px; 
+/* 카드 간 간격 */
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 110px;
+  margin-top: 32px;
 }
 
 /* 메인 카드 레이아웃 */
-.portfolio-item { 
-  display:flex; 
-  align-items:stretch; 
-  gap:40px;              /* 기존 32px → 조금 더 여유 */
-}
-.portfolio-item.reverse { flex-direction: row-reverse; }
-
-/* 썸네일 */
-.thumb { 
-  flex:1.1; 
-  position:relative; 
-  border-radius:20px; 
-  overflow:hidden;
-}
-.thumb img { 
-  width:100%; 
-  height:100%; 
-  object-fit:cover; 
-  transition:transform .6s ease; 
-}
-.thumb:hover img { transform:scale(1.05); }
-
-/* Info Block */
-.info { 
-  flex:1; 
-  display:flex; 
-  flex-direction:column; 
-  justify-content:center; 
-}
-
-/* Industry / Year 메타 정보 */
-.meta { 
-  display:flex; 
-  justify-content:space-between; 
-  color:#94a3b8;           /* 저채도 slate */
-  font-size:.9rem; 
-  margin-bottom:8px; 
-}
-
-/* Title */
-.title { 
-  font-size:1.6rem; 
-  margin:4px 0; 
-}
-.title a { 
-  color:var(--main_color_main_3,#56afdf); 
-  text-decoration:none; 
-}
-
-/* Subtitle */
-.subtitle { 
-  font-weight:600; 
-  color:var(--sub,#0f172a); 
-  margin-bottom:12px; 
-}
-
-/* Description */
-.desc { 
-  line-height:1.6; 
-  margin-bottom:16px; 
-  color:#374151; 
-}
-
-/* Tech Tags — 저채도로 교체 */
-.tags { 
-  display:flex; 
-  flex-wrap:wrap; 
-  gap:8px; 
-}
-
-.tag { 
-  background:rgba(86,175,223,0.18);   /* 낮은 채도 */
-  color:#0f172a;                     /* 네이비 */
-  border-radius:20px; 
-  padding:4px 10px; 
-  font-size:.85rem; 
-  border:1px solid rgba(86,175,223,0.25); /* 아주 연한 테두리 */
-}
-
-/* Responsive */
-@media (max-width: 960px){
-  .portfolio-item, 
-  .portfolio-item.reverse { 
-    flex-direction:column; 
-  }
-}
-
-/* ===============================
-   Portfolio Divider
-================================ */
 .portfolio-item {
-  padding-bottom: 60px;    /* 라인 위 여백 */
-  border-bottom: 1px solid rgba(15, 23, 42, 0.06);   /* 연한 선 */
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+  padding-bottom: 60px; /* 라인 위 여백 */
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
 }
 
 .portfolio-item:last-child {
-  border-bottom: none;     /* 마지막 카드엔 선 제거 */
+  border-bottom: none; /* 마지막 카드엔 선 제거 */
+}
+
+.portfolio-item.reverse {
+  flex-direction: row-reverse;
+}
+
+/* 썸네일 */
+.thumb {
+  flex: 1.1;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.thumb:hover img {
+  transform: scale(1.05);
+}
+
+/* Info Block */
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Industry / Year 메타 정보 */
+.meta {
+  display: flex;
+  justify-content: space-between;
+  color: #94a3b8; /* 저채도 slate */
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+/* Title */
+.title {
+  font-size: 1.6rem;
+  margin: 4px 0;
+}
+
+.title a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* Subtitle */
+.subtitle {
+  font-weight: 600;
+  color: var(--sub);
+  margin-bottom: 12px;
+}
+
+/* Description */
+.desc {
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #374151;
+}
+
+/* Tech Tags — 저채도 */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: rgba(86, 175, 223, 0.18);
+  color: #0f172a;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(86, 175, 223, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .portfolio-item,
+  .portfolio-item.reverse {
+    flex-direction: column;
+  }
 }

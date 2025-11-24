@@ -5,7 +5,7 @@ export default function Skills() {
     <main className="page skills-page">
       <section className="skills-section container">
         <header className="skills-header">
-          <h1 className="title">Skills & Tools</h1>
+          <h1 className="title">Skills &amp; Tools</h1>
         </header>
 
         {/* =========================
@@ -105,7 +105,6 @@ export default function Skills() {
             Sub Skills
           </h2>
           <div className="skill-grid">
-
             <div className="card skill-card">
               <h4>Figma 협업</h4>
               <ul>

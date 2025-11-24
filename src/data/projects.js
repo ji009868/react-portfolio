@@ -9,8 +9,8 @@ const projects = [
       "AI 기반으로 개인의 감성을 해석해 ‘정서적 고향’ 이미지를 생성하는 인터랙티브 키오스크. React + Firebase로 제작하고 Electron으로 전시용 앱 패키징.",
     role: ["Front-end", "Prompt Design", "Firebase"],
     tech: ["React", "Firebase", "Firestore", "Functions", "Electron"],
-    cover: "/1.png",
-    gallery: ["/1.png", "/h_02.jpg", "/h_03.jpg"],
+    cover: "/project_h.png",   // ✅ public/project_h.png
+    gallery: ["/project_h.png", "/h_02.jpg", "/h_03.jpg"],
     process: [
       "문제정의: 관객의 ‘정서적 고향’을 데이터로 표현하기",
       "설계: 5문항 설문 → 키워드 매핑 → 프롬프트 생성",
