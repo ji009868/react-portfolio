@@ -19,14 +19,6 @@ export default function Contact() {
           <h1 className="headline">NEED A WEBSITE?</h1>
           <p className="sub">프로젝트 문의는 아래 이메일로 연락 주세요.</p>
 
-          {/* 메일 To 버튼 */}
-          <a
-            className="cta-pill"
-            href="mailto:ji009868@naver.com?subject=Project%20Inquiry%20from%20Portfolio"
-          >
-            Contact me
-          </a>
-
           {/* 워드마크 느낌의 큰 타이포 */}
           <div className="wordmark" aria-hidden="true">
             JUNIL

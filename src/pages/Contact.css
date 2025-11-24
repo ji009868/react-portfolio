@@ -2,13 +2,13 @@
    Local Tokens (Contact 전용)
 ================================ */
 :root {
-  --main-color: #56afdf; /* Primary */
-  --accent-color: #ffd25f; /* Accent */
+  --main-color: #56afdf;     /* Primary */
+  --accent-color: #ffd25f;   /* Accent */
   --text-color: #0f172a;
 
   /* 실제 헤더/푸터 높이에 맞추면 높이 계산이 정확해짐 */
-  --header-h: 64px; /* index.css .nav 높이와 일치 */
-  --footer-h: 80px; /* 사이트 푸터 영역 여유치 */
+  --header-h: 64px;  /* index.css .nav 높이와 일치 */
+  --footer-h: 80px;  /* 사이트 푸터 영역 여유치 */
 }
 
 /* ================================
@@ -17,13 +17,13 @@
 ================================ */
 .page.contact-page {
   /* 전역 .page의 폭 제한을 해제해 화면 전체 채움 */
-  max-width: none;
+  max-width: none;          /* ✅ 컨테이너 해제 */
   width: 100%;
   margin: 0;
   padding: 0;
 
-  background: var(--main-color); /* Contact 페이지만 파란 배경 */
-  color: #fff;
+  background: var(--bg, #f5f7fb);  /* Contact – 밝은 배경 */
+  color: var(--text-color);
 
   min-height: 100vh;
   display: flex;
@@ -50,15 +50,15 @@
   min-height: calc(100vh - var(--header-h) - var(--footer-h));
   display: grid;
   align-content: center;
-  background: var(--main-color); /* 여분 영역도 동일 색 */
+  background: var(--bg, #f5f7fb);   /* 여분 영역도 동일 색 */
 }
 
 .contact-block {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
   gap: min(4vw, 36px);
-  background: var(--main-color);
-  color: #fff;
+  background: var(--bg, #f5f7fb);
+  color: var(--text-color);
   padding: clamp(24px, 6vw, 64px);
   width: 100%;
 }
@@ -79,8 +79,8 @@
   font-weight: 800;
   letter-spacing: -0.02em;
   font-size: clamp(48px, 9vw, 120px);
+  color: var(--main-color);
   animation: fadeUp 1.2s ease forwards;
-  color: #fff;
 }
 
 .sub {
@@ -139,11 +139,11 @@
   margin: 0 0 6px;
   font-weight: 700;
   opacity: 0.95;
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 .email {
-  color: #ffffff;
+  color: var(--main-color);
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -158,12 +158,11 @@
 }
 
 .links a {
-  color: #ffffff;
+  color: var(--text-color);
   text-decoration: none;
   opacity: 0.9;
   transition: opacity 0.2s;
 }
-
 .links a:hover {
   opacity: 1;
   text-decoration: underline;
@@ -174,39 +173,30 @@
    Keyframes
 ================================ */
 @keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeWord {
-  0% {
-    opacity: 0;
-    transform: translateY(40px) scale(0.95);
-  }
-  100% {
-    opacity: 0.15;
-    transform: translateY(0) scale(1);
-  }
+  0% { opacity: 0; transform: translateY(40px) scale(0.95); }
+  100% { opacity: 0.15; transform: translateY(0) scale(1); }
 }
 
 /* ================================
    Responsive
 ================================ */
 @media (max-width: 1024px) {
+  .contact-block { grid-template-columns: 1fr; }
+  .headline { font-size: clamp(40px, 12vw, 80px); }
+  .wordmark { font-size: clamp(120px, 32vw, 220px); }
+}
+
+@media (max-width: 640px) {
   .contact-block {
-    grid-template-columns: 1fr;
+    padding: 24px 20px 40px;
   }
-  .headline {
-    font-size: clamp(40px, 12vw, 80px);
-  }
-  .wordmark {
-    font-size: clamp(120px, 32vw, 220px);
+  .contact-right {
+    margin-top: 20px;
   }
 }
 
@@ -215,18 +205,18 @@
 ================================ */
 .page.contact-page + footer,
 .page.contact-page ~ footer {
-  background: var(--main-color);
-  color: #fff;
-  border-top: none;
+  background: #fff;
+  color: var(--muted);
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 .page.contact-page + footer a,
 .page.contact-page ~ footer a {
-  color: #fff;
-  text-decoration-color: var(--accent-color);
+  color: inherit;
+  text-decoration-color: var(--primary);
 }
 
 .page.contact-page + footer p,
 .page.contact-page ~ footer p {
-  color: #fff;
+  color: inherit;
 }
