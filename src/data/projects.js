@@ -11,7 +11,7 @@ const projects = [
     tech: ["React", "Firebase", "Electron"],
     // ✅ 경로 수정: /react-portfolio 추가
     cover: "/react-portfolio/project_h.png",
-    gallery: ["/react-portfolio/project_h.png"], 
+    gallery: ["/react-portfolio/project_h_1.png", "/react-portfolio/project_h_2.png", "/react-portfolio/project_h_3.png", "/react-portfolio/project_h_4.png"], 
     process: [
       "문제정의: 관객의 ‘정서적 고향’을 데이터로 표현하기",
       "설계: 5문항 설문 → 키워드 매핑 → 프롬프트 생성",
