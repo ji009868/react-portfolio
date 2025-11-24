@@ -5,59 +5,35 @@ export default function Contact() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    // 페이지가 마운트될 때 페이드인 트리거
-    const timer = setTimeout(() => setVisible(true), 80);
-    return () => clearTimeout(timer);
+    setTimeout(() => setVisible(true), 100);
   }, []);
 
   return (
     <main className={`page contact-page ${visible ? "fade-in" : ""}`}>
-      {/* 화면 전체를 채우는 섹션 */}
-      <section className="contact-block contact-hero">
-        {/* LEFT */}
-        <div className="contact-left">
-          <h1 className="headline">NEED A WEBSITE?</h1>
-          <p className="sub">프로젝트 문의는 아래 이메일로 연락 주세요.</p>
-
-          {/* 워드마크 느낌의 큰 타이포 */}
-          <div className="wordmark" aria-hidden="true">
-            JUNIL
+      <section className="contact-hero">
+        <div className="container contact-container">
+          <div className="contact-left">
+            {/* 문구 수정: 더 진취적인 표현 */}
+            <h1 className="headline">
+              GOT A <br /> PROJECT?
+            </h1>
+            <p className="sub-text">
+              새로운 가치를 만들 준비가 되셨나요?<br />
+              비즈니스 문제를 기술로 해결해 드립니다.
+            </p>
           </div>
-        </div>
 
-        {/* RIGHT */}
-        <div className="contact-right">
-          <h3 className="right-title">Let’s talk</h3>
-
-          <a
-            className="email"
-            href="mailto:ji009868@naver.com?subject=Project%20Inquiry%20from%20Portfolio"
-          >
-            ji009868@naver.com
-          </a>
-
-          <ul className="links">
-            <li>
-              <a
-                href="https://github.com/"
-                target="_blank"
-                rel="noreferrer noopener"
-                aria-label="Github (opens in new tab)"
-              >
-                Github ↗
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noreferrer noopener"
-                aria-label="Instagram (opens in new tab)"
-              >
-                Instagram ↗
-              </a>
-            </li>
-          </ul>
+          <div className="contact-right">
+            <h3>Contact Info</h3>
+            <a className="email-link" href="mailto:ji009868@naver.com">
+              ji009868@naver.com ↗
+            </a>
+            
+            <div className="sns-links">
+              <a href="https://github.com/ji009868" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+            </div>
+          </div>
         </div>
       </section>
     </main>

@@ -1,67 +1,39 @@
 /* =========================
-   Design Tokens (컬러 시스템 리뉴얼)
+   Design Tokens
 ========================= */
 :root {
-  /* 🎨 컬러 시스템 (역할 기반) */
-  --primary: #56AFDF;   /* 주제색 — 아이덴티티, 링크, 포인트 */
-  --accent:  #FFD25F;   /* 강조색 — 버튼, 배지, 하이라이트 */
-  --bg:      #F5F7FB;   /* 배경색 — 페이지 바탕 */
-  --sub:     #0F172A;   /* 보조색 — 본문 텍스트, 라인 */
-
-  /* 💬 텍스트/카드/그림자 */
-  --text: var(--sub);
-  --muted: #6B7280;
-  --card: #FFFFFF;
-  --shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
-
-  /* 📊 기존 stats용 토큰과 호환 */
-  --stats-bg: var(--bg);
-  --stats-text: var(--sub);
-
-  /* 📐 레이아웃 */
-  --radius: 14px;
-  --container: 1200px;
-  --h1: clamp(28px, 5vw, 44px);
-  --h2: clamp(22px, 3.5vw, 28px);
-  --h3: clamp(18px, 2.6vw, 22px);
-
-  /* 과거 네이밍과의 호환 (기존 CSS용) */
-  --main_color_main_3: var(--primary);
+  --primary: #56AFDF;   /* 주제색 */
+  --accent:  #FFD25F;   /* 강조색 */
+  --bg:      #F5F7FB;   /* 배경색 */
+  --sub:     #0F172A;   /* 텍스트 메인 */
+  --text:    #334155;   /* 본문 텍스트 */
+  --muted:   #64748B;   /* 회색 텍스트 */
+  --card:    #FFFFFF;   /* 카드 배경 */
+  
+  --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+  --radius: 16px;
+  --container: 1100px;
 }
 
 /* =========================
    Reset & Base
 ========================= */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
-html,
-body,
-#root {
+html, body, #root {
   height: 100%;
-}
-
-html {
-  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR",
-    Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   color: var(--text);
-  background: var(--bg); /* ✅ 기본 배경 */
+  background: var(--bg);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-img {
-  max-width: 100%;
-  display: block;
 }
 
 a {
@@ -69,226 +41,132 @@ a {
   text-decoration: none;
 }
 
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 button {
+  background: none;
+  border: none;
+  cursor: pointer;
   font: inherit;
 }
 
-/* =========================
-   Layout
-========================= */
-.container {
-  width: 100%;
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* =========================
-   Header
-========================= */
-header.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: var(--card);
-  backdrop-filter: saturate(140%) blur(10px);
-  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  letter-spacing: 0.2px;
-  color: var(--primary);
-}
-
-.brand-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--primary);
-  box-shadow: 0 0 0 3px rgba(86, 175, 223, 0.25);
-}
-
-nav a {
-  display: inline-flex;
-  height: 40px;
-  align-items: center;
-  padding: 0 12px;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  transition: 150ms ease;
-}
-
-nav a:hover {
-  background: rgba(86, 175, 223, 0.12);
-  color: var(--primary);
-  border-color: rgba(86, 175, 223, 0.24);
-}
-
-/* =========================
-   Main & Section Layout
-========================= */
-.main-content {
-  min-height: calc(100vh - 64px - 80px);
-  overflow-y: auto;
-  padding: 24px 0 32px;
-}
-
-/* =========================
-   Cards & Common Components
-========================= */
-.card {
-  background: var(--card);
-  border: 1px solid rgba(15, 23, 42, 0.06);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.12);
-}
-
-/* 뱃지 */
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-size: 12px;
-  background: color-mix(in srgb, var(--accent) 20%, white);
-  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
-  color: var(--sub);
-  font-weight: 500;
-}
-
-/* 태그 (보조용) */
-.tag {
-  font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(86, 175, 223, 0.12);
-  color: var(--primary);
-  border: 1px solid rgba(86, 175, 223, 0.22);
-}
-
-/* =========================
-   Portfolio Grid
-========================= */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: clamp(28px, 3vw, 48px);
-  padding-inline: clamp(16px, 3vw, 32px);
-}
-
-/* =========================
-   Headings
-========================= */
-h1 {
-  font-size: var(--h1);
-  line-height: 1.15;
-  margin: 0 0 12px;
-  color: var(--sub);
-}
-
-h2 {
-  font-size: var(--h2);
-  line-height: 1.2;
-  margin: 0 0 12px;
-  color: var(--sub);
-}
-
-h3 {
-  font-size: var(--h3);
-  line-height: 1.25;
-  margin: 0 0 8px;
-  color: var(--sub);
-}
-
-/* =========================
-   Buttons & Links
-========================= */
-button,
-.btn {
-  background: var(--accent);
-  color: var(--sub);
-  border: none;
-  border-radius: 999px;
-  font-weight: 700;
-  padding: 12px 20px;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
-  transition: all 0.25s ease;
-}
-
-button:hover,
-.btn:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
-}
-
-/* =========================
-   Footer
-========================= */
-.site-footer {
-  padding: 20px 0 24px;
-  color: var(--muted);
-  border-top: 1px solid rgba(15, 23, 42, 0.08);
-  background: #fff;
-}
-
-.site-footer strong {
-  color: var(--primary);
+img {
+  max-width: 100%;
+  display: block;
 }
 
 /* =========================
    Utilities
 ========================= */
-hr.sep {
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 형광펜 강조 효과 (피드백 반영) */
+.highlight {
+  background: linear-gradient(to top, rgba(255, 210, 95, 0.5) 35%, transparent 35%);
+  color: var(--sub);
+  font-weight: 700;
+  padding: 0 2px;
+}
+
+/* 버튼 스타일 */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--sub);
+  box-shadow: 0 4px 12px rgba(255, 210, 95, 0.4);
+}
+
+.btn-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 210, 95, 0.5);
+}
+
+/* 스크린 리더 전용 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
   border: 0;
-  border-top: 1px solid rgba(15, 23, 42, 0.08);
-  margin: 18px 0;
 }
 
-.grid-2 {
-  display: grid;
-  gap: 18px;
-  grid-template-columns: 1.2fr 0.8fr;
+/* =========================
+   Header Layout
+========================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-@media (max-width: 900px) {
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
+.nav {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.grid-3 {
-  display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(3, 1fr);
+.brand {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--sub);
+  letter-spacing: -0.02em;
 }
 
-@media (max-width: 1024px) {
-  .grid-3 {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.brand span {
+  color: var(--primary);
 }
 
-@media (max-width: 640px) {
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
+.site-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.site-nav a {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.site-nav a:hover {
+  color: var(--primary);
+}
+
+/* =========================
+   Footer Layout
+========================= */
+.site-footer {
+  padding: 40px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  margin-top: auto;
 }

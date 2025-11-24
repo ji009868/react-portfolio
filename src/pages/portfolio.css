@@ -1,117 +1,135 @@
-/* ===============================
-   Portfolio Page
-================================ */
 .portfolio-page {
-  background: var(--bg);
-  color: var(--text);
+  padding: 60px 0 100px;
 }
 
-/* 카드 간 간격 */
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.portfolio-header h2 {
+  font-size: 2.5rem;
+  color: var(--sub);
+  margin: 0 0 12px;
+}
+
+.portfolio-header p {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+/* 리스트 레이아웃 */
 .portfolio-list {
   display: flex;
   flex-direction: column;
-  gap: 110px;
-  margin-top: 32px;
+  gap: 80px;
 }
 
-/* 메인 카드 레이아웃 */
+/* 아이템 카드 */
 .portfolio-item {
-  display: flex;
-  align-items: stretch;
+  position: relative; /* 링크 기준점 */
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
   gap: 40px;
-  padding-bottom: 60px; /* 라인 위 여백 */
-  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  align-items: center;
+  transition: transform 0.2s ease;
 }
 
-.portfolio-item:last-child {
-  border-bottom: none; /* 마지막 카드엔 선 제거 */
-}
-
-.portfolio-item.reverse {
-  flex-direction: row-reverse;
+.portfolio-item:hover {
+  transform: translateY(-4px);
 }
 
 /* 썸네일 */
-.thumb {
-  flex: 1.1;
-  position: relative;
-  border-radius: 20px;
+.thumb-area {
+  border-radius: var(--radius);
   overflow: hidden;
+  box-shadow: var(--shadow);
+  aspect-ratio: 16 / 10;
+  background-color: #e2e8f0; /* 이미지 로딩 전 배경 */
 }
 
-.thumb img {
+.thumb-area img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.4s ease;
 }
 
-.thumb:hover img {
-  transform: scale(1.05);
+.portfolio-item:hover .thumb-area img {
+  transform: scale(1.03);
 }
 
-/* Info Block */
-.info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/* 정보 영역 */
+.info-area {
+  padding: 10px 0;
 }
 
-/* Industry / Year 메타 정보 */
 .meta {
-  display: flex;
-  justify-content: space-between;
-  color: #94a3b8; /* 저채도 slate */
   font-size: 0.9rem;
-  margin-bottom: 8px;
-}
-
-/* Title */
-.title {
-  font-size: 1.6rem;
-  margin: 4px 0;
-}
-
-.title a {
-  color: var(--primary);
-  text-decoration: none;
-}
-
-/* Subtitle */
-.subtitle {
   font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  gap: 12px;
+}
+
+/* 제목 크기 확대 (피드백 반영) */
+.title {
+  font-size: 2.2rem;
+  font-weight: 800;
   color: var(--sub);
-  margin-bottom: 12px;
+  margin: 0 0 8px;
+  line-height: 1.1;
 }
 
-/* Description */
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0 0 16px;
+}
+
 .desc {
-  line-height: 1.6;
-  margin-bottom: 16px;
-  color: #374151;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  font-size: 1.05rem;
+  word-break: keep-all;
 }
 
-/* Tech Tags — 저채도 */
-.tags {
+/* 태그 */
+.tech-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
 .tag {
-  background: rgba(86, 175, 223, 0.18);
-  color: #0f172a;
+  background: rgba(86, 175, 223, 0.1);
+  color: var(--primary);
+  padding: 6px 12px;
   border-radius: 20px;
-  padding: 4px 10px;
   font-size: 0.85rem;
-  border: 1px solid rgba(86, 175, 223, 0.25);
+  font-weight: 600;
 }
 
-/* Responsive */
-@media (max-width: 960px) {
-  .portfolio-item,
-  .portfolio-item.reverse {
-    flex-direction: column;
+/* 전체 클릭 링크 */
+.full-card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* 반응형 */
+@media (max-width: 900px) {
+  .portfolio-item {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 }

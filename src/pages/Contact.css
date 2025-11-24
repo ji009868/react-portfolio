@@ -1,222 +1,69 @@
-/* ================================
-   Local Tokens (Contact 전용)
-================================ */
-:root {
-  --main-color: #56afdf;     /* Primary */
-  --accent-color: #ffd25f;   /* Accent */
-  --text-color: #0f172a;
-
-  /* 실제 헤더/푸터 높이에 맞추면 높이 계산이 정확해짐 */
-  --header-h: 64px;  /* index.css .nav 높이와 일치 */
-  --footer-h: 80px;  /* 사이트 푸터 영역 여유치 */
-}
-
-/* ================================
-   Contact Page Only
-   (다른 페이지에 영향 X)
-================================ */
-.page.contact-page {
-  /* 전역 .page의 폭 제한을 해제해 화면 전체 채움 */
-  max-width: none;          /* ✅ 컨테이너 해제 */
-  width: 100%;
-  margin: 0;
-  padding: 0;
-
-  background: var(--bg, #f5f7fb);  /* Contact – 밝은 배경 */
-  color: var(--text-color);
-
-  min-height: 100vh;
+.contact-page {
+  min-height: calc(100vh - 140px); /* 헤더/푸터 제외 높이 */
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1s ease, transform 1s ease;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* 진입 페이드인 */
-.page.contact-page.fade-in {
+.contact-page.fade-in {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* ================================
-   Main Block Layout
-================================ */
-.contact-hero {
-  width: 100%;
-  min-height: calc(100vh - var(--header-h) - var(--footer-h));
+.contact-container {
   display: grid;
-  align-content: center;
-  background: var(--bg, #f5f7fb);   /* 여분 영역도 동일 색 */
-}
-
-.contact-block {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: min(4vw, 36px);
-  background: var(--bg, #f5f7fb);
-  color: var(--text-color);
-  padding: clamp(24px, 6vw, 64px);
-  width: 100%;
-}
-
-/* ================================
-   LEFT
-================================ */
-.contact-left {
-  position: relative;
-  display: grid;
-  align-content: start;
-  gap: 16px;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
 }
 
 .headline {
-  margin: 0;
-  line-height: 0.95;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  font-size: clamp(48px, 9vw, 120px);
-  color: var(--main-color);
-  animation: fadeUp 1.2s ease forwards;
+  font-size: clamp(60px, 8vw, 100px);
+  font-weight: 900;
+  line-height: 0.9;
+  color: var(--sub);
+  margin: 0 0 24px;
 }
 
-.sub {
-  max-width: 720px;
-  opacity: 0.95;
-  font-size: clamp(14px, 1.8vw, 20px);
-  animation: fadeUp 1.4s ease forwards;
-}
-
-.cta-pill {
-  display: inline-block;
-  margin-top: 14px;
-  padding: 16px 28px;
-  background: var(--accent-color);
-  color: var(--text-color);
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 700;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  width: clamp(240px, 42%, 460px);
-  text-align: center;
-  animation: fadeUp 1.6s ease forwards;
-}
-
-/* 버튼 호버 */
-.cta-pill:hover {
-  transform: scale(1.05) translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* 워드마크 */
-.wordmark {
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  font-size: clamp(140px, 24vw, 280px);
-  letter-spacing: 0.04em;
-  font-weight: 800;
-  opacity: 0;
-  pointer-events: none;
-  animation: fadeWord 2s ease forwards 0.6s;
-}
-
-/* ================================
-   RIGHT
-================================ */
-.contact-right {
-  display: grid;
-  align-content: start;
-  gap: 14px;
-  animation: fadeUp 1.8s ease forwards;
-}
-
-.right-title {
-  margin: 0 0 6px;
-  font-weight: 700;
-  opacity: 0.95;
-  color: var(--text-color);
-}
-
-.email {
-  color: var(--main-color);
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.links {
-  list-style: none;
-  margin: 6px 0 14px;
-  padding: 0;
-  display: grid;
-  gap: 6px;
-}
-
-.links a {
-  color: var(--text-color);
-  text-decoration: none;
-  opacity: 0.9;
-  transition: opacity 0.2s;
-}
-.links a:hover {
-  opacity: 1;
-  text-decoration: underline;
-  text-decoration-color: var(--accent-color);
-}
-
-/* ================================
-   Keyframes
-================================ */
-@keyframes fadeUp {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeWord {
-  0% { opacity: 0; transform: translateY(40px) scale(0.95); }
-  100% { opacity: 0.15; transform: translateY(0) scale(1); }
-}
-
-/* ================================
-   Responsive
-================================ */
-@media (max-width: 1024px) {
-  .contact-block { grid-template-columns: 1fr; }
-  .headline { font-size: clamp(40px, 12vw, 80px); }
-  .wordmark { font-size: clamp(120px, 32vw, 220px); }
-}
-
-@media (max-width: 640px) {
-  .contact-block {
-    padding: 24px 20px 40px;
-  }
-  .contact-right {
-    margin-top: 20px;
-  }
-}
-
-/* ================================
-   Footer Color Sync (Contact Only)
-================================ */
-.page.contact-page + footer,
-.page.contact-page ~ footer {
-  background: #fff;
+.sub-text {
+  font-size: 1.2rem;
   color: var(--muted);
-  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  line-height: 1.6;
 }
 
-.page.contact-page + footer a,
-.page.contact-page ~ footer a {
-  color: inherit;
-  text-decoration-color: var(--primary);
+.contact-right {
+  background: var(--card);
+  padding: 40px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
-.page.contact-page + footer p,
-.page.contact-page ~ footer p {
-  color: inherit;
+.email-link {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 16px 0 32px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.sns-links {
+  display: flex;
+  gap: 16px;
+}
+
+.sns-links a {
+  font-weight: 600;
+  color: var(--sub);
+}
+.sns-links a:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .contact-container { grid-template-columns: 1fr; }
+  .headline { font-size: 60px; }
 }
