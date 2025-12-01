@@ -131,8 +131,7 @@ export default function About() {
         {/* CTA */}
         <article className="card cta-card">
           <div className="cta-content">
-            <h2>Let's build something great.</h2>
-            <p>함께 성장할 준비가 되셨나요?</p>
+            <h2>Contact Me</h2>
           </div>
           <Link to="/contact" className="btn btn-accent">
             Let's Talk

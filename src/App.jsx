@@ -42,7 +42,7 @@ function App() {
               download
               className="nav-link nav-resume"
             >
-              Resume
+              이력서 다운
             </a>
           </div>
         </div>
