@@ -1,41 +1,65 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import "./Contact.css";
 
 export default function Contact() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setVisible(true), 100);
+    const timer = setTimeout(() => setVisible(true), 100);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <main className={`page contact-page ${visible ? "fade-in" : ""}`}>
-      <section className="contact-hero">
-        <div className="container contact-container">
-          <div className="contact-left">
-            {/* 문구 수정: 더 진취적인 표현 */}
-            <h1 className="headline">
-              GOT A <br /> PROJECT?
-            </h1>
-            <p className="sub-text">
-              새로운 가치를 만들 준비가 되셨나요?<br />
-              비즈니스 문제를 기술로 해결해 드립니다.
-            </p>
-          </div>
+      <div className="container">
+        <h1 className="contact-title">Contact me</h1>
 
-          <div className="contact-right">
+        <div className="contact-grid">
+          <div className="contact-card">
             <h3>Contact Info</h3>
+            <p className="contact-desc">
+              이메일, 깃허브, 그리고 이력서를 통해 바로 연락하거나 프로필을 확인하세요.
+            </p>
+
             <a className="email-link" href="mailto:ji009868@naver.com">
-              ji009868@naver.com ↗
+              ji009868@naver.com
             </a>
-            
+
             <div className="sns-links">
-              <a href="https://github.com/ji009868" target="_blank" rel="noreferrer">GitHub</a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+              <a href="https://github.com/ji009868" target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+              <a
+                href="/react-portfolio/%EC%9D%B4%EB%A0%A5%EC%84%9C_%EB%B0%B0%EC%A4%80%EC%9D%BC.pdf"
+                download
+              >
+                이력서 다운로드
+              </a>
             </div>
           </div>
+
+          <div className="contact-card">
+            <h3>Send Message</h3>
+            <form className="contact-form">
+              <label>
+                Name
+                <input type="text" name="name" placeholder="Your name" />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="Your email" />
+              </label>
+              <label>
+                Message
+                <textarea name="message" rows="5" placeholder="How can I help?"></textarea>
+              </label>
+              <button type="submit" className="btn btn-accent send-btn">
+                Send Message
+              </button>
+            </form>
+          </div>
         </div>
-      </section>
+      </div>
     </main>
   );
 }

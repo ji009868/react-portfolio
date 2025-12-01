@@ -7,10 +7,7 @@ export default function Portfolio() {
     <main className="page portfolio-page">
       <div className="container">
         <header className="portfolio-header">
-          <h2>Selected Works</h2>
-          <p>
-            비즈니스 가치를 창출하고 <span className="highlight">사용자 경험을 개선한</span> 프로젝트들입니다.
-          </p>
+          <h2 className="works-title">Works</h2>
         </header>
 
         <div className="portfolio-list">

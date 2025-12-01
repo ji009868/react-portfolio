@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import projects from "../data/projects";
 import "./PortfolioDetail.css";
 
@@ -6,6 +7,7 @@ export default function PortfolioDetail() {
   const { id } = useParams();
   const nav = useNavigate();
   const p = projects.find((x) => x.id === id);
+  const [expandedIdx, setExpandedIdx] = useState(null);
 
   if (!p) {
     return (
@@ -62,7 +64,12 @@ export default function PortfolioDetail() {
               {p.process.map((step, i) => (
                 <li key={i}>
                   <span className="num">{i + 1}</span>
-                  <p>{step}</p>
+                  <div className="process-title">
+                    {typeof step === "object" && step !== null ? step.title : step}
+                  </div>
+                  {typeof step === "object" && step?.detail && (
+                    <div className="process-desc">{step.detail}</div>
+                  )}
                 </li>
               ))}
             </ol>
@@ -72,7 +79,14 @@ export default function PortfolioDetail() {
             <h3>Result & Impact</h3>
             <ul className="result-list">
               {p.results.map((res, i) => (
-                <li key={i}>{res}</li>
+                <li key={i}>
+                  <div className="result-title">
+                    {typeof res === "object" && res !== null ? res.title : res}
+                  </div>
+                  {typeof res === "object" && res?.detail && (
+                    <div className="result-desc">{res.detail}</div>
+                  )}
+                </li>
               ))}
             </ul>
           </section>
@@ -84,8 +98,21 @@ export default function PortfolioDetail() {
             <h3>Gallery</h3>
             <div className="gallery-grid">
               {p.gallery.map((img, i) => (
-                <div key={i} className="gallery-item">
-                  <img src={img} alt={`Gallery ${i}`} />
+                <div
+                  key={i}
+                  className={`gallery-item ${expandedIdx === i ? "expanded" : ""}`}
+                  onClick={() => setExpandedIdx(expandedIdx === i ? null : i)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      setExpandedIdx(expandedIdx === i ? null : i);
+                    }
+                  }}
+                  aria-pressed={expandedIdx === i}
+                >
+                  <img src={img} alt={`Gallery ${i + 1}`} />
                 </div>
               ))}
             </div>

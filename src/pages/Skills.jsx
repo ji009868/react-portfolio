@@ -5,7 +5,7 @@ export default function Skills() {
     <main className="page skills-page">
       <section className="skills-section container">
         <header className="skills-header">
-          <h1 className="title">Skills & Tools</h1>
+          <h1 className="title">Skills</h1>
         </header>
 
         {/* =========================
@@ -148,7 +148,7 @@ export default function Skills() {
         ========================== */}
         <section aria-labelledby="sub-skills">
           <h2 id="sub-skills" className="section-title">
-            Sub Skills & Tools
+            Sub Skills
           </h2>
           <div className="skill-grid">
             <div className="card skill-card">

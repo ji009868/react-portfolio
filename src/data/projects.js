@@ -7,21 +7,26 @@ const projects = [
     industry: "Interactive / Exhibition",
     description:
       "AI 기반으로 개인의 감성을 해석해 ‘정서적 고향’ 이미지를 생성하는 인터랙티브 키오스크. React + Firebase로 제작하고 Electron으로 전시용 앱 패키징",
-    role: ["Front-end", "Prompt Design", "Firebase"],
+    role: ["Front-end", "Back-end"],
     tech: ["React", "Firebase", "Electron"],
-    // ✅ 경로 수정: /react-portfolio 추가
     cover: "/react-portfolio/project_h.png",
-    gallery: ["/react-portfolio/project_h_1.png", "/react-portfolio/project_h_2.png", "/react-portfolio/project_h_3.png", "/react-portfolio/project_h_4.png"], 
+    gallery: [
+      "/react-portfolio/project_h_1.png",
+      "/react-portfolio/project_h_2.png",
+      "/react-portfolio/project_h_3.png",
+      "/react-portfolio/project_h_4.png",
+    ],
     process: [
-      "문제정의: 관객의 ‘정서적 고향’을 데이터로 표현하기",
-      "설계: 5문항 설문 → 키워드 매핑 → 프롬프트 생성",
-      "개발: React Kiosk UI, Firestore 저장, Functions 이미지 생성",
-      "전시: Electron 빌드, 통계 대시보드, SMS 공유",
+      { title: "문제정의", detail: "관객의 ‘정서적 고향’을 데이터로 표현하기" },
+      { title: "설계", detail: "5문항 설문 → 키워드 매핑 → 프롬프트 생성" },
+      { title: "개발", detail: "React Kiosk UI, Firestore 저장, Functions 이미지 생성" },
+      { title: "전시", detail: "Electron 빌드, 통계 대시보드, SMS 공유" },
     ],
     results: [
-      "프롬프트 튜닝으로 ‘키워드-이미지’ 일치율 체감 향상",
-      "전시 기간 평균 대기시간 단축(로딩 최적화)",
-      "참여자 피드백 기반 UI 배치 개선",
+      { title: "AI 프롬프트 튜닝 고도화", detail: "‘키워드→이미지’ 생성 일치율 향상" },
+      { title: "로딩 구조 최적화", detail: "전시 기간 평균 대기시간 단축" },
+      { title: "키오스크 UX 안정화", detail: "전시 중 오류·중단 없는 안정적 운영" },
+      { title: "실시간 데이터 집계 구현", detail: "관객 참여 현황 파악 및 운영 효율 개선" },
     ],
   },
   {
@@ -31,23 +36,22 @@ const projects = [
     year: "2025",
     industry: "Web / Server Programming",
     description:
-      "Node.js와 Express로 개발 중인 F1 팬 커뮤니티 웹사이트. 경기 예측, 리뷰, 굿즈 쇼핑, 마이존 기능을 통해 팬들이 소통하고 참여할 수 있는 플랫폼 구축",
+      "Node.js와 Express로 개발 중인 F1 커뮤니티 사이트. 경기 예측, 리뷰, 굿즈 쇼핑, 마이페이지 기능을 통해 팬들의 참여를 유도하는 플랫폼",
     role: ["Full-stack", "Server Programming", "Database"],
     tech: ["Node.js", "MongoDB", "REST API"],
-    // ✅ 경로 수정: /react-portfolio 추가
     cover: "/react-portfolio/4.png",
     gallery: ["/react-portfolio/4.png"],
     process: [
-      "서버 구축: Express 기반 MVC 구조 설정 및 미들웨어 설계",
-      "DB 연동: MongoDB Atlas 연결 및 예측/투표/장바구니 CRUD 구현",
-      "API 설계: /predict, /review, /shop 등 REST API 구성",
-      "View Layer: EJS 템플릿 엔진을 활용한 SSR 페이지 렌더링",
-      "기능 구현: 로그인, 예측, 리뷰, 쇼핑, 마이존 기능 제작",
+      { title: "서버 구축", detail: "Express 기반 MVC 구조 설정 및 공통 미들웨어 설계" },
+      { title: "DB 연동", detail: "MongoDB Atlas 연결 후 예측/리뷰/장바구니 CRUD 구현" },
+      { title: "API 설계", detail: "/predict, /review, /shop 등 REST API 구성" },
+      { title: "View Layer", detail: "EJS 템플릿 엔진으로 SSR 페이지 렌더링" },
+      { title: "기능 구현", detail: "로그인, 예측, 리뷰, 쇼핑, 마이페이지 기능 제작" },
     ],
     results: [
-      "회원별 예측/리뷰/장바구니 데이터를 통합 관리",
-      "Express 미들웨어(requestTime) 활용 카운트다운 타이머 구현",
-      "DB 연동 및 라우팅 정상 작동 — UI 및 세부 기능 개발",
+      "회원 예측/리뷰/장바구니 데이터 통합 관리",
+      "Express 미들웨어(requestTime) 활용 카운터·타이머 구현",
+      "DB 연동 이후에도 안정 동작하는 UI 에러 핸들링 기능 개발",
     ],
   },
   {
@@ -57,22 +61,21 @@ const projects = [
     year: "2025",
     industry: "Web Interaction / Motion Design",
     description:
-      "영화 ‘백 투 더 퓨처’의 타임머신을 모티브로 한 인터랙티브 웹 프로젝트 ‘시간여행을 통한 추억 회상’을 주제로, SVG 애니메이션과 3D Transform을 활용해 감성적인 몰입 경험 연출",
+      "영화 인터스텔라의 SF 레트로 무드를 모티브로 한 인터랙티브 웹. SVG 애니메이션과 3D Transform을 활용해 감성적인 몰입 경험을 연출",
     role: ["Front-end", "Animation Design", "JS Logic"],
     tech: ["HTML", "CSS", "JavaScript", "SVG Animation"],
-    // ✅ 경로 수정: /react-portfolio 추가
     cover: "/react-portfolio/5.png",
     gallery: ["/react-portfolio/5.png"],
     process: [
-      "기획: 과거 회상 콘셉트 설정 — SF + 레트로 무드 조화",
-      "시각설계: 웜톤 조명, 어두운 배경으로 회상의 감성 연출",
-      "SVG 애니메이션: 계기판, 불타는 바퀴자국 Keyframe 구현",
-      "스크롤 트리거: 만화/음악/여행 섹션 등장 시 타임라인 모션 적용",
-      "3D Transform: 이미지 및 오브젝트에 마우스 기울기 인터랙션 추가",
+      { title: "기획", detail: "SF + 레트로 콘셉트 정의 및 스토리 플로우 설계" },
+      { title: "시각 디자인", detail: "네온톤 조명과 어두운 배경으로 대비감 있는 무드 구성" },
+      { title: "SVG 애니메이션", detail: "계기판·불꽃·바퀴 자락 등 Keyframe 구현" },
+      { title: "스크롤/스토리", detail: "만화·음악·여행 섹션 전환에 연계된 모션 구성" },
+      { title: "3D Transform", detail: "이미지 큐브, 마우스 기울임 인터랙션 적용" },
     ],
     results: [
-      "SVG 애니메이션 완성 — 스크롤 기반 전환 효과 구현",
-      "텍스트 애니메이션 및 시각효과 통합"
+      "SVG 애니메이션을 통한 인터랙션 기반 환상적 효과 구현",
+      "패럴랙스·3D 모션 결합으로 몰입감 강화",
     ],
   },
   {
@@ -82,34 +85,82 @@ const projects = [
     year: "2024",
     industry: "Web / UX",
     description:
-      "각국의 소도시를 이미지 중심으로 소개하는 React 기반 여행 가이드. 추천/저장 플로우와 반응형 레이아웃 설계.",
-    role: ["Front-end", "UI/UX"],
+      "각국의 소도시를 이미지 중심으로 소개하는 React 기반 여행 가이드. 추천/저장 플로우와 반응형 레이아웃 설계",
+    role: ["Front-end"],
     tech: ["React"],
-    // ✅ 경로 수정: /react-portfolio 추가
     cover: "/react-portfolio/thumb_triptiny.png",
-    gallery: ["/react-portfolio/thumb_triptiny.png"],
-    process: [
-      "리서치: 소도시 데이터 구조 및 카드 디자인",
-      "개발: 리스트/상세 라우팅, 상태 공유",
-      "테스트: 모바일 우선 반응형 최적화"
+    gallery: [
+      "/react-portfolio/triptiny_1.png",
+      "/react-portfolio/triptiny_2.png",
+      "/react-portfolio/triptiny_3.png",
+      "/react-portfolio/triptiny_4.png",
     ],
-    results: ["체류 시간 증가, 이탈률 감소", "추천 리스트 저장 기능 추가"]
+    process: [
+      {
+        title: "React 컴포넌트 구조 설계",
+        detail: "재사용성을 고려하여 Header, Card, Grid Layout 등 UI 요소를 컴포넌트 단위로 모듈화",
+      },
+      {
+        title: "데이터 바인딩 및 렌더링 최적화",
+        detail: "JSON 형태의 소도시 데이터를 props로 전달하고 map()으로 동적 리스트 렌더링 구현",
+      },
+      {
+        title: "반응형 갤러리 UI 구현",
+        detail: "Flexbox와 CSS Grid로 데스크톱·태블릿·모바일에서 깨짐 없는 이미지 갤러리 구성",
+      },
+      {
+        title: "GitHub Pages 배포 파이프라인 구축",
+        detail: "gh-pages 패키지로 React 빌드 결과물을 정적 웹사이트로 자동 배포",
+      },
+    ],
+    results: [
+      { title: "컴포넌트 기반 개발", detail: "재사용성과 유지보수성이 높은 모듈형 구조 확립" },
+      { title: "데이터 기반 UI 확장성 확보", detail: "데이터 추가만으로 콘텐츠가 확장되는 유연한 구조 구현" },
+      { title: "SPA 경험 제공", detail: "페이지 새로고침 없이 부드러운 화면 전환과 빠른 로딩 속도 달성" },
+      { title: "반응형 웹 최적화", detail: "모든 디바이스에서 일관된 사용자 경험과 시각적 완성도 유지" },
+    ],
   },
   {
     id: "sasha-sloan",
     title: "Sasha Sloan",
     subtitle: "Artist Website (HTML/CSS)",
-    year: "2023",
+    year: "2024",
     industry: "Web / Music",
     description:
-      "뮤지션 소개 3페이지 사이트. JS 없이 CSS 전환만으로 부드러운 페이지 전환 구현.",
-    role: ["Design", "Markup"],
+      "뮤지션 소개 3페이지 사이트. JS 없이 CSS 전환만으로 부드러운 페이지 전환 구현",
+    role: ["Front-end"],
     tech: ["HTML", "CSS"],
-    // ✅ 경로 수정: /react-portfolio 추가
     cover: "/react-portfolio/thumb_sasha.png",
-    gallery: ["/react-portfolio/thumb_sasha.png"],
-    process: ["콘셉트 보드", "레이아웃/타이포", "CSS 전환 설계"],
-    results: ["경량 페이지(로딩 빠름)", "명확한 정보 구조"],
+    gallery: [
+      "/react-portfolio/sasha_1.png",
+      "/react-portfolio/sasha_2.png",
+      "/react-portfolio/sasha_3.png",
+      "/react-portfolio/sasha_4.png",
+    ],
+    process: [
+      {
+        title: "기획 및 콘셉트 정의",
+        detail: "아티스트의 음악적 색깔(Melancholy, Dark Pop)을 시각화하기 위한 컬러 팔레트와 무드보드 설정",
+      },
+      {
+        title: "정보 구조 설계 (IA)",
+        detail: "사용자가 프로필·앨범·사진에 빠르게 도달하도록 탭 기반 직관적 내비게이션 구성",
+      },
+      {
+        title: "반응형 UI 개발",
+        detail: "PC/모바일 모두에서 이미지와 텍스트 가독성을 유지하는 반응형 그리드와 미디어 쿼리 구현",
+      },
+      {
+        title: "미디어 최적화 및 배포",
+        detail: "고해상도 앨범 아트·유튜브 영상 임베딩 시 로딩 지연 최소화, GitHub Pages로 정적 웹 호스팅",
+      },
+    ],
+    results: [
+      { title: "아티스트 아이덴티티 시각화", detail: "다크 테마 적용으로 음악적 분위기와 웹 디자인의 일체감 형성" },
+      { title: "정보 탐색 경로 단축", detail: "직관적인 탭 메뉴 구조로 페이지 이탈률 감소 및 접근성 향상" },
+      { title: "다양한 디바이스 호환성 확보", detail: "모바일/데스크톱 등 모든 환경에서 깨짐 없는 레이아웃 제공" },
+      { title: "정적 웹 배포 최적화", detail: "별도 서버 구축 없이 안정적인 서비스 운영 및 유지보수 용이성 확보" },
+    ],
   },
 ];
 
