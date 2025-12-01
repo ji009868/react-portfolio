@@ -46,13 +46,18 @@ export default function About() {
         {/* Identity Card */}
         <article className="card id-card">
           <div className="card-top">
-            <span className="label">Profile</span>
-            <h2 className="name">BAE JUNIL</h2>
-            <p className="role-desc">
-              새로운 기술을
-              <br />
-              깊이 있게 탐구합니다.
-            </p>
+            <div className="card-top-text">
+              <span className="label">Profile</span>
+              <h2 className="name">BAE JUNIL</h2>
+              <p className="role-desc">
+                새로운 기술을
+                <br />
+                깊이 있게 탐구합니다.
+              </p>
+            </div>
+            <div className="profile-photo">
+              <img src="/react-portfolio/profile.png" alt="Profile" />
+            </div>
           </div>
           <Link to="/contact" className="link-arrow">
             Contact Me →
