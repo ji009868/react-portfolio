@@ -12,10 +12,10 @@
   transform: translateY(0);
 }
 
-.contact-title {
+.page-title {
   font-size: clamp(36px, 5vw, 52px);
-  font-weight: 900;
-  color: var(--sub);
+  font-weight: 800;
+  color: var(--primary);
   margin: 0 0 24px;
   letter-spacing: -0.02em;
 }
@@ -112,7 +112,7 @@
 }
 
 @media (max-width: 768px) {
-  .contact-title {
+  .page-title {
     text-align: left;
   }
 }

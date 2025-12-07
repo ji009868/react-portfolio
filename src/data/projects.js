@@ -39,8 +39,12 @@ const projects = [
       "Node.js와 Express로 개발 중인 F1 커뮤니티 사이트. 경기 예측, 리뷰, 굿즈 쇼핑, 마이페이지 기능을 통해 팬들의 참여를 유도하는 플랫폼",
     role: ["Full-stack", "Server Programming", "Database"],
     tech: ["Node.js", "MongoDB", "REST API"],
-    cover: "/react-portfolio/4.png",
-    gallery: ["/react-portfolio/4.png"],
+    cover: "/react-portfolio/pitstop.png",
+    gallery: [
+      "/react-portfolio/pitstop.png",
+      "/react-portfolio/pitstop_1.png",
+      "/react-portfolio/pitstop_2.png",
+    ],
     process: [
       { title: "서버 구축", detail: "Express 기반 MVC 구조 설정 및 공통 미들웨어 설계" },
       { title: "DB 연동", detail: "MongoDB Atlas 연결 후 예측/리뷰/장바구니 CRUD 구현" },
@@ -52,30 +56,6 @@ const projects = [
       "회원 예측/리뷰/장바구니 데이터 통합 관리",
       "Express 미들웨어(requestTime) 활용 카운터·타이머 구현",
       "DB 연동 이후에도 안정 동작하는 UI 에러 핸들링 기능 개발",
-    ],
-  },
-  {
-    id: "back-to-the-memory",
-    title: "Back To The Memory",
-    subtitle: "Interactive Web — SF Retro Motion",
-    year: "2025",
-    industry: "Web Interaction / Motion Design",
-    description:
-      "영화 인터스텔라의 SF 레트로 무드를 모티브로 한 인터랙티브 웹. SVG 애니메이션과 3D Transform을 활용해 감성적인 몰입 경험을 연출",
-    role: ["Front-end", "Animation Design", "JS Logic"],
-    tech: ["HTML", "CSS", "JavaScript", "SVG Animation"],
-    cover: "/react-portfolio/5.png",
-    gallery: ["/react-portfolio/5.png"],
-    process: [
-      { title: "기획", detail: "SF + 레트로 콘셉트 정의 및 스토리 플로우 설계" },
-      { title: "시각 디자인", detail: "네온톤 조명과 어두운 배경으로 대비감 있는 무드 구성" },
-      { title: "SVG 애니메이션", detail: "계기판·불꽃·바퀴 자락 등 Keyframe 구현" },
-      { title: "스크롤/스토리", detail: "만화·음악·여행 섹션 전환에 연계된 모션 구성" },
-      { title: "3D Transform", detail: "이미지 큐브, 마우스 기울임 인터랙션 적용" },
-    ],
-    results: [
-      "SVG 애니메이션을 통한 인터랙션 기반 환상적 효과 구현",
-      "패럴랙스·3D 모션 결합으로 몰입감 강화",
     ],
   },
   {

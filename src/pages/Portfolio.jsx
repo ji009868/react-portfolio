@@ -7,7 +7,7 @@ export default function Portfolio() {
     <main className="page portfolio-page">
       <div className="container">
         <header className="portfolio-header">
-          <h2 className="works-title">Works</h2>
+          <h1 className="page-title">Works</h1>
         </header>
 
         <div className="portfolio-list">

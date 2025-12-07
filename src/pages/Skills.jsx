@@ -1,11 +1,11 @@
-import "./Skills.css";
+﻿import "./Skills.css";
 
 export default function Skills() {
   return (
     <main className="page skills-page">
       <section className="skills-section container">
         <header className="skills-header">
-          <h1 className="title">Skills</h1>
+          <h1 className="page-title">Skills</h1>
         </header>
 
         {/* =========================
@@ -17,11 +17,16 @@ export default function Skills() {
           </h2>
           <div className="skill-grid">
             <div className="card skill-card">
-              <h4>HTML</h4>
+              <h4>
+                <span className="skill-icon">
+                  <img src="/react-portfolio/icon/html.png" alt="" aria-hidden="true" />
+                </span>
+                HTML
+              </h4>
               <ul>
                 <li>
                   <span className="highlight">시맨틱 태그</span> 구조 설계 및{" "}
-                  <span className="highlight">접근성(A11y)</span>을 고려한 마크업
+                  <span className="highlight">접근성</span>(A11y)을 고려한 마크업
                 </li>
                 <li>header, nav, main 등 의미론적 요소의 적절한 배치</li>
                 <li>
@@ -32,7 +37,12 @@ export default function Skills() {
             </div>
 
             <div className="card skill-card">
-              <h4>CSS</h4>
+              <h4>
+                <span className="skill-icon">
+                  <img src="/react-portfolio/icon/css.png" alt="" aria-hidden="true" />
+                </span>
+                CSS
+              </h4>
               <ul>
                 <li>
                   Flexbox·Grid를 활용한{" "}
@@ -47,7 +57,12 @@ export default function Skills() {
             </div>
 
             <div className="card skill-card">
-              <h4>JavaScript (ES6+)</h4>
+              <h4>
+                <span className="skill-icon">
+                  <img src="/react-portfolio/icon/javascript.webp" alt="" aria-hidden="true" />
+                </span>
+                JavaScript (ES6+)
+              </h4>
               <ul>
                 <li>
                   <span className="highlight">DOM 조작</span> 및 <span className="highlight">이벤트 위임</span> 처리
@@ -61,11 +76,16 @@ export default function Skills() {
             </div>
 
             <div className="card skill-card">
-              <h4>React</h4>
+              <h4>
+                <span className="skill-icon">
+                  <img src="/react-portfolio/icon/react.png" alt="" aria-hidden="true" />
+                </span>
+                React
+              </h4>
               <ul>
                 <li>
-                  <span className="highlight">Hooks</span>(useState, useEffect
-                  등)를 활용한 함수형 컴포넌트 개발
+                  Hooks(useState, useEffect
+                  등)를 활용한 <span className="highlight">함수형 컴포넌트</span> 개발
                 </li>
                 <li>
                   재사용성을 고려한{" "}
@@ -76,7 +96,12 @@ export default function Skills() {
             </div>
 
             <div className="card skill-card">
-              <h4>React Ecosystem</h4>
+              <h4>
+                <span className="skill-icon">
+                  <img src="/react-portfolio/icon/react.png" alt="" aria-hidden="true" />
+                </span>
+                React Ecosystem
+              </h4>
               <ul>
                 <li>
                   React Router를 이용한{" "}
@@ -92,7 +117,12 @@ export default function Skills() {
             </div>
 
             <div className="card skill-card">
-              <h4>Optimization</h4>
+              <h4>
+                <span className="skill-icon">
+                  <img src="/react-portfolio/icon/perf.svg" alt="" aria-hidden="true" />
+                </span>
+                Optimization
+              </h4>
               <ul>
                 <li>
                   Lazy Loading 및 Code Splitting을 통한{" "}
@@ -100,17 +130,21 @@ export default function Skills() {
                 </li>
                 <li>Lighthouse 점수 개선을 위한 이미지 최적화 및 SEO 적용</li>
                 <li>
-                  불필요한 리렌더링 방지(useMemo, useCallback)를 통한 성능 최적화
+                  불필요한 리렌더링 방지(useMemo, useCallback)를 통한 <span className="highlight">성능 최적화</span>
                 </li>
               </ul>
             </div>
 
             <div className="card skill-card">
-              <h4>API / Network</h4>
+              <h4>
+                <span className="skill-icon">
+                  <img src="/react-portfolio/icon/api.png" alt="" aria-hidden="true" />
+                </span>
+                API / Network
+              </h4>
               <ul>
                 <li>
-                  <span className="highlight">RESTful API</span> 연동 및 에러
-                  핸들링
+                  RESTful API 연동 및 <span className="highlight">에러 핸들링</span>
                 </li>
                 <li>환경 변수(.env)를 활용한 API 키 보안 관리</li>
                 <li>Axios/Fetch API를 활용한 HTTP 요청 모듈화</li>
@@ -118,10 +152,15 @@ export default function Skills() {
             </div>
 
             <div className="card skill-card">
-              <h4>Git / Collaboration</h4>
+              <h4>
+                <span className="skill-icon">
+                  <img src="/react-portfolio/icon/git.png" alt="" aria-hidden="true" />
+                </span>
+                Git / Collaboration
+              </h4>
               <ul>
                 <li>
-                  <span className="highlight">Git Flow</span> 기반의 브랜치 전략
+                  Git Flow 기반의 <span className="highlight">브랜치 전략</span>
                   운영
                 </li>
                 <li>Pull Request(PR) 및 코드 리뷰를 통한 협업 경험</li>
@@ -129,17 +168,6 @@ export default function Skills() {
               </ul>
             </div>
 
-            <div className="card skill-card">
-              <h4>Firebase</h4>
-              <ul>
-                <li>
-                  <span className="highlight">Auth</span>(로그인) 및{" "}
-                  <span className="highlight">Firestore</span>(DB) 연동
-                </li>
-                <li>Storage를 이용한 이미지 업로드 및 관리</li>
-                <li>Hosting을 통한 정적 웹사이트 배포</li>
-              </ul>
-            </div>
           </div>
         </section>
 
@@ -152,7 +180,12 @@ export default function Skills() {
           </h2>
           <div className="skill-grid">
             <div className="card skill-card">
-              <h4>Figma & Design</h4>
+              <h4>
+                <span className="skill-icon">
+                  <img src="/react-portfolio/icon/figma.svg" alt="" aria-hidden="true" />
+                </span>
+                Figma & Design
+              </h4>
               <ul>
                 <li>
                   디자이너와의 핸드오프 프로세스
@@ -164,13 +197,34 @@ export default function Skills() {
             </div>
 
             <div className="card skill-card">
-              <h4>Backend Basic</h4>
+              <h4>
+                <span className="skill-icon">
+                  <img src="/react-portfolio/icon/node.png" alt="" aria-hidden="true" />
+                </span>
+                Node.js
+              </h4>
               <ul>
                 <li>
-                  <span className="highlight">Node.js/Express</span>를 활용한 간단한{" "}
-                  REST API 서버 구축
+                  Express 기반 미들웨어 설계와{" "}
+                  <span className="highlight">REST API 라우팅</span>
                 </li>
-                <li>MongoDB/Mongoose를 이용한 데이터 스키마 설계 경험</li>
+                <li>환경 변수로 비밀키를 분리하고 에러를 안전하게 처리</li>
+              </ul>
+            </div>
+
+            <div className="card skill-card">
+              <h4>
+                <span className="skill-icon">
+                  <img src="/react-portfolio/icon/mongodb.svg" alt="" aria-hidden="true" />
+                </span>
+                Database
+              </h4>
+              <ul>
+                <li>
+                  MongoDB/Mongoose로 <span className="highlight">데이터 스키마 설계</span>
+                </li>
+                 <li>인덱스·관계 설계로 <span className="highlight">데이터 무결성</span> 유지</li>
+                <li>Firebase Auth·Firestore + Storage/Hosting으로 <span className="highlight">인증·배포 일원화</span></li>
               </ul>
             </div>
           </div>
@@ -185,20 +239,30 @@ export default function Skills() {
           </h2>
           <div className="skill-grid">
             <div className="card skill-card">
-              <h4>Creative Tools</h4>
+              <h4>
+                <span className="skill-icon">
+                  <img src="/react-portfolio/icon/adobe.png" alt="" aria-hidden="true" />
+                </span>
+                Creative Tools
+              </h4>
               <ul>
                 <li>
-                  <span className="highlight">Photoshop·Illustrator</span>를 활용한{" "}
-                  그래픽 에셋 편집
+                  Photoshop·Illustrator를 활용한{" "}
+                  <span className="highlight">그래픽 에셋 편집</span>
                 </li>
-                <li><span className="highlight">After Effects</span>를 이용한 모션 그래픽 이해</li>
+                <li>After Effects를 이용한 <span className="highlight">모션 그래픽</span> 이해</li>
               </ul>
             </div>
 
             <div className="card skill-card">
-              <h4>Language</h4>
+              <h4>
+                <span className="skill-icon">
+                  <img src="/react-portfolio/icon/globe.svg" alt="" aria-hidden="true" />
+                </span>
+                Language
+              </h4>
               <ul>
-                <li>일본어 <span className="highlight">JLPT N3</span> (기본 회화 및 독해 가능)</li>
+                <li>일본어 JLPT N3 (기본 회화 및 독해 가능)</li>
               </ul>
             </div>
           </div>
@@ -207,3 +271,11 @@ export default function Skills() {
     </main>
   );
 }
+
+
+
+
+
+
+
+

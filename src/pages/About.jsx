@@ -48,7 +48,9 @@ export default function About() {
           <div className="card-top">
             <div className="card-top-text">
               <span className="label">Profile</span>
-              <h2 className="name">BAE JUNIL</h2>
+              <h2 className="name">
+                BAE <span className="name-accent">JUNIL</span>
+              </h2>
               <p className="role-desc">
                 새로운 기술을
                 <br />
@@ -59,8 +61,8 @@ export default function About() {
               <img src="/react-portfolio/profile.png" alt="Profile" />
             </div>
           </div>
-          <Link to="/contact" className="link-arrow">
-            Contact Me →
+          <Link to="/skills" className="link-arrow">
+            Skills →
           </Link>
         </article>
 

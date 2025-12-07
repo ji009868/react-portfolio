@@ -18,11 +18,11 @@
   margin-bottom: 20px;
 }
 
-.skills-header .title {
-  font-size: clamp(32px, 5vw, 48px);
+.skills-header .page-title {
+  font-size: clamp(36px, 5vw, 52px);
   font-weight: 800;
   color: var(--primary);
-  margin: 0 0 12px;
+  margin: 0 0 24px;
   letter-spacing: -0.02em;
 }
 
@@ -78,7 +78,7 @@
 /* Headings in card */
 .skill-card h4 {
   margin: 0 0 16px;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: var(--primary);
   letter-spacing: -0.01em;
@@ -158,4 +158,26 @@
   font-size: 0.9em;
   font-family: ui-monospace, monospace;
   font-weight: 600;
+}
+
+.skill-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.skill-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
 }

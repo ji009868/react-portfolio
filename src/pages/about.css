@@ -1,4 +1,4 @@
-/* =========================
+﻿/* =========================
    About Page Layout
 ========================= */
 .page.about-page {
@@ -97,16 +97,16 @@
 .container.about-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(260px, auto);
+  grid-auto-rows: minmax(130px, auto);
   gap: 24px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* 카드 공통 스타일 */
+/* 移대뱶 怨듯넻 ?ㅽ???*/
 .card {
-  background: var(--card); /* 기본값 */
+  background: var(--card); /* 湲곕낯媛?*/
   border-radius: 24px;
   padding: 32px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
@@ -116,6 +116,10 @@
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:not(.cta-card) {
+  min-height: 260px;
 }
 
 .card:hover {
@@ -148,7 +152,7 @@
   text-decoration: underline;
 }
 
-/* ✅ 모든 주요 카드에 동일한 'Soft Blue' 그라데이션 적용 */
+/* ??紐⑤뱺 二쇱슂 移대뱶???숈씪??'Soft Blue' 洹몃씪?곗씠???곸슜 */
 
 /* 1. Identity Card */
 .id-card {
@@ -179,6 +183,9 @@
   color: var(--sub);
   letter-spacing: -0.02em;
 }
+.id-card .name-accent {
+  color: var(--primary);
+}
 
 .role-desc {
   font-size: 1.1rem;
@@ -204,7 +211,7 @@
   position: absolute;
   inset: 0;
   background: url("/react-portfolio/profile.png") no-repeat right bottom;
-  background-size: 288px; /* 1.2x 기존 240px */
+  background-size: 288px; /* 1.2x 湲곗〈 240px */
   opacity: 1;
   pointer-events: none;
 }
@@ -217,7 +224,7 @@
 /* 2. Education Card */
 .edu-card {
   grid-column: span 2;
-  /* 통일된 컬러 */
+  /* ?듭씪??而щ윭 */
   background: linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
 }
 
@@ -243,7 +250,7 @@
 /* 3. Showcase Card */
 .showcase-card {
   grid-column: span 2;
-  /* 통일된 컬러 */
+  /* ?듭씪??而щ윭 */
   background: linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
 }
 
@@ -301,7 +308,7 @@
 /* 4. Tech Card */
 .tech-card {
   grid-column: span 2;
-  /* 통일된 컬러 */
+  /* ?듭씪??而щ윭 */
   background: linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
 }
 
@@ -324,19 +331,19 @@
   gap: 6px;
 }
 
-/* 태그 디자인: 배경색을 흰색으로 하여 카드 색상 위에서 돋보이게 */
+/* Tech tags with a blue outline for clearer separation */
 .tech-group .tags span {
   font-size: 0.8rem;
   padding: 6px 12px;
-  background: rgba(255, 255, 255, 0.6); /* 반투명 흰색 */
-  border: 1px solid rgba(0,0,0,0.03);
+  background: rgba(86, 175, 223, 0.08); /* light blue */
+  border: 1px solid rgba(86, 175, 223, 0.45);
   border-radius: 10px;
   color: var(--sub);
   font-weight: 600;
   box-shadow: 0 1px 2px rgba(0,0,0,0.03);
 }
 
-/* 5. CTA Card (Accent Color - 얘만 다르게 유지) */
+/* 5. CTA Card (Accent Color - ?섎쭔 ?ㅻⅤ寃??좎?) */
 .cta-card {
   grid-column: span 4; 
   flex-direction: row;
@@ -344,6 +351,7 @@
   justify-content: space-between;
   background: var(--sub);
   color: #fff;
+  min-height: 130px;
 }
 
 .cta-content h2 {
@@ -388,3 +396,5 @@
     gap: 20px;
   }
 }
+
+

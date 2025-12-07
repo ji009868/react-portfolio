@@ -7,14 +7,12 @@
   margin-bottom: 60px;
 }
 
-.portfolio-header h2 {
-  font-size: 2.5rem;
+.portfolio-header .page-title {
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 800;
   color: var(--primary);
-  margin: 0;
-}
-
-.works-title {
-  color: var(--primary);
+  margin: 0 0 24px;
+  letter-spacing: -0.02em;
 }
 
 /* 리스트 레이아웃 */

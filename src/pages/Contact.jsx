@@ -12,7 +12,7 @@ export default function Contact() {
   return (
     <main className={`page contact-page ${visible ? "fade-in" : ""}`}>
       <div className="container">
-        <h1 className="contact-title">Contact me</h1>
+        <h1 className="page-title">Contact</h1>
 
         <div className="contact-grid">
           <div className="contact-card">
