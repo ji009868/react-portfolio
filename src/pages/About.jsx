@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 
 const projects = [
   { id: "project-h", title: "Project H", cover: "/react-portfolio/project_h.png" },
-  { id: "pit-stop", title: "Pit Stop", cover: "/react-portfolio/4.png" },
-  { id: "back-to-the-memory", title: "Back To The Memory", cover: "/react-portfolio/5.png" },
+  { id: "pit-stop", title: "Pit Stop", cover: "/react-portfolio/pitstop.png" },
   { id: "trip-tiny", title: "Trip Tiny", cover: "/react-portfolio/thumb_triptiny.png" },
   { id: "sasha-sloan", title: "Sasha Sloan", cover: "/react-portfolio/thumb_sasha.png" },
 ];
